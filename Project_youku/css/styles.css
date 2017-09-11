@@ -1,0 +1,116 @@
+.fl{
+	float: left;
+}
+.fr{
+	float: right;
+}
+a{
+	color: black;
+	text-decoration: none;
+}
+.clearfixed:after{
+	display: block;
+	content: '';
+	height: 0;
+	clear: both;
+}
+body{
+	padding: 0;
+	margin: 0;
+}
+ul{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+#header{
+	width:1420px ;
+	margin: 20px auto;
+	height: 80px;
+}
+#header img{
+	margin-right:40px;
+	float:left;
+}
+
+
+
+
+/*内容*/
+#content{
+	width: 1200px;
+	margin:0 auto;
+}
+/*子菜单*/
+#content .submenu{
+	/*height: 93px;*/
+	width: 1200px;
+	border-bottom: 3px solid gainsboro;
+	border-top: 22px solid #f5f5f5;
+	margin-top:20px;
+}
+#content .submenu dl{
+	width: 285px;
+	margin: -22px 0 0 0;
+	padding: 0;
+	float: left;
+}
+#content .submenu dl dt{
+	padding: 0 10px;
+	background:#909090;
+	display:inline-block;	
+	line-height: 22px;
+	font-size: 14px;
+	color: white;
+}
+#content .submenu dl dd{
+	margin:0;
+	padding:10px 0px 20px 0px ;
+}
+#content .submenu dl dd a{
+	font-size: 14px;
+	margin-right:20px ;
+	white-space: nowrap;
+	color: #555555;
+}
+ /*轮播*/
+#content .movie{
+	width: 1190px;
+	height: 394px;
+}
+#content .movie p.movietext1{
+	margin: 0;
+	font-size: 26px;
+	color: grey
+}
+#content .movie a{
+	display: block;
+	color: gray;
+	padding: 10px;
+}
+#content .movie .movie_list{
+	width: 1190px;
+	height: 300px;
+	overflow: hidden;
+}
+#content .movie .movie_list ul{
+	width: 2000px;
+	height: 300px;
+	left: 0px;
+}
+#content .movie .movie_list ul li{
+	position: relative;
+	float: left;
+	width: 200px;
+	height: 300px;
+	margin-right: 20px;
+	left:0px;
+}
+#content .movie .movie_list ul li .list_text{
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	height: 80px;
+	color: white;
+	background: rgba(0,0,0,0.5);
+}
