@@ -1,0 +1,91 @@
+#project .subnav li{
+	float: left;
+	width: 332px;
+	line-height: 42px;
+	height: 42px;
+	background: #fafafa;
+}
+#project .subnav li a{
+	font-size: 16px;
+	color: black;
+}
+#project .subnav li.current,#project .subnav li:hover{
+	background: url(../images/tapbg.png) no-repeat;
+	background-size:contain;
+}
+/*内容*/
+/*#project .project_inner{
+	color: #666666;
+	width: 660px;
+	height: 132px;
+	border: 1px solid gray;
+	padding: 22px 30px 26px 30px;
+}
+#project .project_inner img{
+	width: 200px;
+	height: 125px;
+	margin-right: 42px;
+}
+#project .project_inner span{
+	margin-top: 22px;
+}
+#project .project_inner span.view{
+	margin-left: 30px;
+	background: url(../images/eye.png) no-repeat left center;
+	text-indent: 2em;
+}
+#project .project_inner .project_right{
+	width: 250px;
+	height: 96px;
+	border: 1px solid gray;
+}*/
+#project .list{
+	width: 722px;
+	height: 200px;
+	overflow: hidden;
+}
+#project .list .list_box{
+	border: 1px solid #CBCBCB;
+	padding: 25px 30px 30px ;
+	margin: 10px 0px;
+}
+#project .list .list_box img{
+	width: 200px;
+	height: 125px;
+	margin-right: 40px;
+}
+#project .list .list_box .list_text{
+	width: 414px;
+}
+#project .list .list_box .list_text h3{
+	font-size: 16px;
+	font-weight: bold;
+}
+#project .list .list_box .list_text p{
+	line-height:24px;
+	margin:10px 0;
+	color:#666666;
+}
+#project .list .list_box .list_text span{
+	margin-right:30px;
+	color:#7f7f7f;
+}
+#project .list .list_box .list_text .icon_view{
+	background: url(../images/eye.png) no-repeat left center;
+	padding-left:20px;
+}
+#project .list .list_box .list_text a{
+	float: right;
+	color:#7f7f7f;
+}
+/*右边内容*/
+#project .list_right{
+	width: 250px;
+	height: 96px;
+	border: 1px solid #CBCBCB;
+	margin-top: 40px;
+}
+#project .list_right img{
+	margin: 20px;
+}
+

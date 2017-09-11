@@ -1,0 +1,192 @@
+/*公共样式*/
+.wrapper{
+	width: 100%;
+}
+.content{
+	width: 1000px;
+	margin: 0 auto;
+}
+/*背景相关样式*/
+.bg_red{
+	background:#d43b33;
+}
+.project_bg{
+	background: url(../images/by_good_project.png);
+	height: 350px;
+}
+.culture_bg{
+	background: url(../images/by_good_project.png);
+	height: 460px;
+}
+.footer_bg{
+	background: url(../images/footer_bg.png);
+	height: 315px;
+}
+.bg_gray{
+	background:#f7f7f7 ;
+}
+/*边框样式*/
+.border_bottom{
+	border-bottom: 1px solid #cbcbcb;
+}
+.border_bottomred{
+	border-bottom: 2px solid #d43b33;
+}
+/*文本居中*/
+.textcenter{
+	text-align: center;
+}
+/*文本加粗*/
+.bold{
+	font-weight: bold;
+}
+/*外边距*/
+.margin_top30{
+	margin-top: 30px;
+}
+.margin_top60{
+	margin-top:60px;
+}
+.marginright50{
+	margin-right: 50px;
+}
+.marginleft70{
+	margin-left: 70px;
+}
+.marginleft50{
+	margin-left:50px;
+}
+.marginbottom60{
+	margin-bottom: 60px;
+}
+/*内边距*/
+.padding_top40{
+	padding-top:40px;
+}
+.padding_top70{
+	padding-top:70px;
+	
+}
+/*文本颜色*/
+.gary{
+	color: #979797;
+}
+/*在线客服*/
+.online{
+	background: #d43b33;
+	position: fixed;
+	right: 10px;
+	bottom: 50px;
+}
+.online a{
+	display: block;
+	width: 72px;
+	height: 72px;
+	border-bottom: 1px solid #CBCBCB;
+}
+.online .qq a{
+	background: url(../images/r_qq.png) no-repeat;
+}
+.online .wx a{
+	background: url(../images/r_wx.png) no-repeat;
+}
+.online .tel a{
+	background: url(../images/r_phone.png) no-repeat;
+}
+.online .back a{
+	background: url(../images/r_top.png) no-repeat;
+	border-bottom: none;
+}
+.culture_376{
+	width: 376px;
+}
+/*浮动相关属性*/
+.fl{
+	float: left;
+}
+.fr{
+	float: right;
+}
+.clear{
+	clear:both;
+}
+.clearfix:after{
+	display: block;
+	content: '';
+	height: 0;
+	clear: both;
+}
+/*新闻标题*/
+.title{
+	font-size: 18px;
+	margin: 35px 0 15px;
+}
+.title h3{
+	color: #D43B33;
+}
+/*项目标题*/
+.project_title{
+	width: 230px;
+	margin: 20px auto 0;
+	padding-top: 20px;
+	font-size: 16px;
+}
+.project_title h3{
+	color: black;
+	font: 16px/36px 微软雅黑;
+	font-weight: bolder;
+}
+/*分页按钮
+.pages{
+	margin: 20px 0px;
+}
+.pages li{
+	float:left;
+	width: 37px;
+	height: 35px;
+	line-height: 35px;
+	text-align: center;
+	background:#b50900 ;
+	color: white;
+	margin-right: 1px;
+}
+.pages .first{
+	background: #d8d8d8;
+	border-radius:5px 0 0 5px;
+}
+.pages .last{
+	background: #d8d8d8;
+	border-radius:0 5px 5px 0;
+}*/
+
+/*底部分页按钮*/
+.btn li{
+	float: left;
+	width: 42px;
+	height: 36px;
+	color: white;
+	font-size: 16px;
+	line-height: 36px;
+	margin-right: 1px;
+}
+.btn li a{
+	display: block;
+	color: white;
+	font-size: 16px;
+	width: 42px;
+	height: 36px;
+}
+.btn li a:hover{
+	text-decoration: none;
+}
+.btn li.btn_left{
+	background: #d8d8d8;
+	border-radius: 5px 0 0 5px;
+}
+.btn li.btn_right{
+	background: #d8d8d8;
+	border-radius:0 5px 5px 0 ;
+}
+.btn li.btn_ccenter, .btn li:hover{
+	background: #b50900;
+}

@@ -1,0 +1,201 @@
+
+/*关于我们*/
+.title_box{
+	height: 65px;
+}
+#aboutus .title_box .title{
+	width: 180px;
+	margin: 0 auto;
+	background: white;
+	padding-top:22px ;
+	text-align: center;
+	color: #626262;
+	font-size: 18px;
+}
+#aboutus .title_box .title h3{
+	color: #d43b33;
+	line-height: 36px;
+}
+#aboutus .aboutus_inner p{
+	line-height: 30px;
+	color:#626262 ;
+}
+#aboutus .aboutus_inner p.more{
+	color: black;
+	width: 106px;
+	height: 38px;
+	line-height: 38px;
+	background: url(../images/more_more_bg.png) no-repeat;
+	margin: 30px auto 0px;
+}
+#aboutus .aboutus_inner p.more a:hover{
+	text-decoration: none;
+}
+/*企业文化*/
+#culture .culture_nav{
+	width: 354px;
+	margin: 0 auto;
+	padding-top:32px;
+}
+#culture .culture_nav li{
+	width: 106px;
+	height:32px;
+	float:left;
+	margin-right:10px;
+	border: 1px solid #CBCBCB;
+	font-size: 14px;
+	line-height: 32px;
+	text-align: center;
+	color: white;
+	background: gray;
+}
+#culture .culture_nav li.current,#culture .culture_nav li:hover{
+	color:#D43B33;
+	background: white;
+	border-bottom: 1px solid white;
+}
+#culture .culture_670{
+	width: 670px;
+	margin: 0 auto;
+}
+#culture .culture_670 img{
+	float: left;
+}
+#culture .culture_670 dl{
+	float: right;
+}
+#culture .culture_670 dl dd{
+	line-height: 30px;
+	font-weight: bold;
+}
+/*好项目*/
+#project .project_title{
+	width: 230px;
+	margin: 0 auto;
+	padding-top: 20px;
+	font-size: 18px;
+	color:#626262;
+}
+#project .project_title h3{
+	color: black;
+	font-size: 20px;
+	line-height: 36px;
+}
+#project .project_box{
+	margin-top: 46px;
+}
+/*左箭头*/
+#project #leftarrow,#rightarrow{
+	width:20px;
+	height:148px;
+	background: url(../images/btnleft.png) no-repeat;
+}
+#project #rightarrow{
+	background: url(../images/btnright.png) no-repeat;
+	margin-left:5px ;
+}
+#project #leftarrow{
+	margin-right: 10px;
+}
+/*内容*/
+#project .projectimg li{
+	float: left;
+	margin-right:5px;
+	position: relative;
+}
+#project .projectimg li img{
+	width: 310px;
+	height: 150px;
+}
+#project .projectimg h1{
+	position: absolute;
+	left: 0px;
+	bottom:0px;
+	line-height: 34px;
+	background: rgba(0,0,0,0.5);
+	color: white;
+	padding: 0px 20px;
+	/*文字超出处理*/
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+	width: 270px;
+}
+/*新闻中心*/
+#news .news_title,#message .message_title{
+	font-size: 18px;
+	margin: 35px 0 15px;
+}
+#news .news_title h3,#message .message_title h3{
+	color: #D43B33;
+}
+#news{
+	width: 460px;
+}
+#news .news_list li{
+	line-height: 35px;
+	border-bottom: 1px dashed #CBCBCB;
+}
+#news .news_list li a{
+	color: black;
+}
+#news .news_list li span{
+	float: right;
+	color: #CBCBCB;
+}
+#news .news_more{
+	height: 60px;
+	line-height: 60px;
+}
+#news .news_more a{
+	color: black;
+	border-bottom: 1px solid #CBCBCB;
+	font-size: 14px;
+	font-style: italic;
+}
+/*在线留言*/
+#message{
+	width: 500px;
+}
+#message .input243,#message .vcode{	
+	width: 243px;
+	height: 37px;
+	border: 1px solid #CBCBCB;	
+	text-indent: 15px;
+	color: #CBCBCB;
+	font-size: 14px;
+	margin-bottom:10px;
+}
+#message .marginright10{
+	margin-right:10px;
+}
+#message .vcode{
+	width: 90px;
+}
+#message textarea{
+	width: 498px;
+	height:185px;
+	text-indent: 15px;
+	color: #CBCBCB;
+	font-size: 14px;
+	resize: none;
+}
+/*提交*/
+#message .form_bottom{
+	height: 34px;
+	line-height: 34px;
+	margin-top: 10px;
+}
+#message .form_bottom span{
+	color:#d43b33;
+}
+/*提交按钮*/
+#message .form_bottom input{
+	width: 130px;
+	height: 34px;
+	line-height: 34px;
+	color: white;
+	background: #D43B33;
+	border: none;
+	float: right;
+}

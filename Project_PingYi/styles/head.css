@@ -1,0 +1,63 @@
+
+/*头部样式 简易版*/
+/*#header ul li{
+	float:left;
+	height:74px;
+	line-height:74px;
+	margin-left:40px;
+}
+#header ul li.current,#header ul li:hover{
+	background: url(../images/nav_bg.png) no-repeat center bottom;
+} 
+#header ul li a{
+	color:white;
+	font-size:16px;
+}
+#header ul li a:hover{
+	text-decoration: none;
+}*/
+
+/*升级版头部样式*/
+#header #main_nav>li{
+	float:left;
+	height:74px;
+	line-height:74px;
+	margin-left:40px;
+	position: relative;
+	}
+#header #main_nav li.current,#header #main_nav>li:hover{
+	background: url(../images/nav_bg.png) no-repeat center bottom;
+}
+/*子菜单的制作流程*/ 
+/*关键技术：子绝对父相对
+ 制作步骤：1，先制作静态效果，2.再将做好的效果盒子隐藏。
+ 		3.用hover来实现显示的过程
+ * */
+#header #main_nav>li .sub_nav{
+	display: none;	
+	background: #d43b33;
+	width: 80px;
+	position: absolute;
+	top: 68px;
+	left: 0px;
+}
+#header #main_nav li .sub_nav li{
+	line-height: 30px;
+	border:1px solid white;
+	text-align: center;
+	color: white;
+}
+#header #main_nav li a{
+	color:white;
+	font-size:16px;
+}
+#header #main_nav li a:hover{
+	text-decoration: none;
+}
+#header #main_nav>li:hover .sub_nav {
+	display: block;
+}
+/*banner*/
+#banner img{
+	width: 100%;
+}

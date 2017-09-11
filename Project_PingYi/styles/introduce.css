@@ -1,0 +1,82 @@
+.title_box{
+	height: 65px;
+}
+#aboutus .title_box .title{
+	width: 180px;
+	margin: 0 auto;
+	background: white;
+	padding-top:22px ;
+	text-align: center;
+	color: #626262;
+	font-size: 18px;
+}
+#aboutus .title_box .title h3{
+	color: #d43b33;
+	line-height: 36px;
+}
+#aboutus .aboutus_inner p{
+	line-height: 30px;
+	color:#626262 ;
+}
+/*企业文化*/
+
+#culture .title{
+	margin: 0;
+}
+#culture dl{
+	margin-top: 15px;
+}
+#culture dl dt{
+	font-weight:bold;
+	line-height: 32px;
+	
+}
+#culture dl dd{
+	color: #585858;
+	height:28px;
+	line-height: 28px;
+	border-bottom: 1px solid #CBCBCB;
+}
+#culture img{
+	width: 537px;
+	height: 302px;
+}
+/*大事记*/
+#timeline>p{
+	margin-bottom: 30px;
+	color: gray;
+}
+#timeline ul li{
+	width: 250px;
+	height: 172px;
+	float: left;
+	position: relative;
+}
+#timeline ul li.timeline_text{
+	background: #4b4b4b;
+	color: white;
+}
+#timeline ul li.timeline_text p{
+	margin: 58px 20px 0px 20px;
+}
+#timeline .contitue p{
+	font-size: 18px;
+	color: white;
+	line-height: 50px;
+	margin-bottom: 68px;
+}
+
+#timeline ul li .triangle{
+	position: absolute;
+	width: 0;
+	height: 0;
+	border: 10px solid #4b4b4b;
+	border-color:transparent #4b4b4b transparent transparent;
+	top: 50%;
+	right: 0;
+}
+#timeline ul li .triangleleft{
+	left: 0;
+	border-color:transparent  transparent transparent #4b4b4b;
+	
+}

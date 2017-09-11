@@ -1,0 +1,15 @@
+#contact .project_title{
+	margin-bottom: 30px;
+}
+#contact .box{
+	width: 333px;
+	margin-bottom: 70px;
+}
+#contact .box img{
+	width: 67px;
+	height: 66px;
+	margin-left:138px;
+}
+#contact .box p{
+	line-height: 24px;
+}

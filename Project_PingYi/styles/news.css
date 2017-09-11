@@ -1,0 +1,39 @@
+#news>ul{
+	margin-left:167px;
+	padding-top: 30px;
+}
+#news>ul li{
+	float: left;
+	width: 334px;
+	height: 42px;
+	line-height: 42px;
+	color: black;
+
+}
+#news>ul li a{
+	font-size: 14px;
+	color: black;
+}
+#news>ul li.current,#news>ul li:hover{
+	background: url(../images/tabbg.png) no-repeat;
+	/*background-size: contain;*/
+}
+#news .news_content ul li{
+	float: left;
+	width: 480px;
+	height: 235px;
+	margin-right: 20px;
+}
+#news .news_content .news_text{
+	width: 254px;
+	color: #857696;
+}
+#news .news_content .news_text h3{
+	font-size: 16px;
+}
+#news .news_content .news_text span{
+	line-height: 24px;
+}
+#news .news_content .news_text p{
+	padding-top:30px;
+}

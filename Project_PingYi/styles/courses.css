@@ -1,0 +1,68 @@
+#cource ul li{
+	float: left;
+	position: relative;
+	margin-bottom: 30px;
+}
+#cource ul li img{
+	width:404px;
+	height:240px;
+}
+#cource ul li p{
+	position: absolute;
+	width:404px;
+	height: 50px;
+	line-height: 50px;
+	font-size: 16px;
+	background: #222222;
+	left: 0;
+	bottom: 0;
+	color: white;
+	text-align: center;
+}
+/*更多课程*/
+
+#cource .more_cource ul li{
+	float: left;
+	width: 242px;
+	margin-right: 10px;
+}
+#cource .more_cource ul li.last{
+	margin: 0;
+}
+#cource .more_cource ul li img{
+	width: 242px;
+	height: 130px;
+}
+#cource .more_cource ul li span{
+	color: #222222;
+	display: block;
+	text-align: center;
+		line-height: 28px;
+	font-weight: bold;
+}
+
+
+
+
+
+
+
+
+#button{
+	width: 585px;
+	margin:0 auto;
+}
+#button .btnright,#button .btnleft{
+	width: 285px;
+	height: 32px;
+	color: white;
+	font-size: 18px;
+}
+#button .btnleft{
+	margin-right: 15px;
+	background: #e5e5e5;
+	text-align: right;
+}
+#button .btnright,#button ul li:hover{
+	background: #D43B33;
+}
