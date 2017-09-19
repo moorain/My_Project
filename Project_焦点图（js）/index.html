@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+       body,ul,li{
+           padding: 0;
+           margin: 0;
+        }
+        #bannerFocus{
+            width: 800px;
+            height: 400px;
+            margin:100px auto;
+            border: 2px solid yellow;
+            position: relative;
+            overflow: hidden;
+        }
+        #bannerFocus #bannerBox{
+            
+            position: absolute;
+            left: 0px;
+        }
+        #bannerFocus ul li{
+            list-style: none;
+            float: left;
+        }
+        #bannerFocus ul li img{
+            width: 800px;
+            height: 400px;
+        }
+        #numBf{
+            position: absolute;
+            bottom: 30px;
+            left: 300px;
+        }
+        #numBf li{
+            width: 20px;
+            height: 20px;
+            background: yellow;
+            border-radius: 20px;
+            line-height: 20px;
+            text-align: center;
+            color:green;
+            margin:  0 10px;
+        }
+        #numBf .current{
+            background: green;
+            color: white;
+        }
+    </style>
+   
+</head>
+<body>
+    <!-- 外层盒子 ，正常网页看到的图片区域-->
+    <div id="bannerFocus">
+        <!-- 图片列表 -->
+        <ul id="bannerBox">
+            <li><img src="img/m (1).jpg" alt=""></li>
+            <li><img src="img/m (2).jpg" alt=""></li>
+            <li><img src="img/m (3).jpg" alt=""></li>
+            <li><img src="img/m (4).jpg" alt=""></li>
+            <li><img src="img/m (5).jpg" alt=""></li>
+            
+        </ul>        
+        <!-- 图片计数 -->
+        <ul id = "numBf">
+            <li class="current">1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+        </ul>
+    
+    </div> 
+       <!-- 左右图标 -->
+        <input type="button" id="leftBtn" value = '上一页'>
+        <input type="button"  id="rightBtn" value= '下一页'>
+    <script>
+        //制作按钮效果
+        //获取内容列表数组
+        var con = document.getElementById('bannerBox');
+        var lists = con.getElementsByTagName('li');
+        console.log(lists,con);//length:5
+        //获取图片计数数组
+        var numA = document.getElementById('numBf').getElementsByTagName('li');
+        console.log(numA);//length:3
+        //获取按钮
+        var pre = document.getElementById('leftBtn');
+        var next= document.getElementById('rightBtn');
+        //克隆标签
+        var liclone = lists[0].cloneNode(true);
+        lists[0].parentNode.appendChild(liclone);
+        //开始制作按钮效果
+        //左边按钮翻页效果实现：
+        var num = 0;
+        //左翻页
+        pre.onclick = function(){
+            var leftV = con.currentStyle||document.defaultView.getComputedStyle(con);
+            //转换数据类型
+            leftV = parseInt(leftV.left);
+            if(num == 0){
+                num--;
+                num = lists.length-2;
+            }else{
+                num--;
+            }
+            var leftV = -800*num;
+            con.style.left = leftV+'px';
+            //计数器效果
+            //清除所有初始样式
+            for(var i = 0;i<numA.length;i++){
+                numA[i].className = '';
+            }
+            //判断并添加样式
+            if(num<lists.length-1){
+                numA[num].className = 'current';
+            }else if(num == lists.length-1){
+                numA[0].className = 'current';
+            }
+            clearInterval(timeId);
+            
+        }
+        //右翻页
+        next.onclick = function(){
+            var leftV = con.currentStyle||document.defaultView.getComputedStyle(con);
+            //转换数据类型
+            leftV = parseInt(leftV.left);
+            if(num == lists.length-2){
+                num++;
+                num = 0;
+            }else{
+                num++;
+            }
+            var leftV = -800*num;
+            con.style.left = leftV+'px';
+            //计数器效果
+            //清除所有初始样式
+            for(var i = 0;i<numA.length;i++){
+                numA[i].className = '';
+            }
+            //判断并添加样式
+            if(num<lists.length-1){
+                numA[num].className = 'current';
+            }else if(num == lists.length-1){
+                numA[0].className = 'current';
+            }
+            //点击后清除计时器
+            clearInterval(timeId);
+        }
+        //图片周期切换
+        var timeId = setInterval(function(){
+            var leftV = con.currentStyle||document.defaultView.getComputedStyle(con);
+            //转换数据类型
+            leftV = parseInt(leftV.left);
+            if(num == lists.length-2){
+                num++;
+                num = 0;
+            }else{
+                num++;
+            }
+            var leftV = -800*num;
+            con.style.left = leftV+'px';
+            //计数器效果
+            //清除所有初始样式
+            for(var i = 0;i<numA.length;i++){
+                numA[i].className = '';
+            }
+            //判断并添加样式
+            if(num<lists.length-1){
+                numA[num].className = 'current';
+            }else if(num == lists.length-1){
+                numA[0].className = 'current';
+            }
+
+        },1000)
+
+
+    </script>
+
+
+    </body>
+</html>

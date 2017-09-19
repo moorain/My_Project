@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+      #circle{
+        background:red;
+        width:100px;
+        height: 100px;
+        border-radius: 100px;
+        position: absolute;
+        left: 0;
+        top: 0;
+         }
+         #circle1{
+        background:red;
+        width:100px;
+        height: 100px;
+        border-radius: 100px;
+        position: absolute;
+        left: 0;
+        top: 20px;
+         }
+         #circle2{
+        background:green;
+        width:100px;
+        height: 100px;
+        border-radius: 100px;
+        position: absolute;
+        left: 0;
+        /* top: 1000px; */
+        bottom: -500px;
+        }
+
+    </style>
+  
+</head>
+<body>
+    <div id ="circle"></div>
+    <div id ="circle1"></div>
+    <div id ="circle2"></div>
+    <div id ="circle3"></div>
+    <div id ="circle4"></div>
+
+    <script>
+        /*animationFn()   动画效果封装     可以多次使用
+
+		 */
+        //动画封装
+            // 形参：对象 obj  （加引号）
+            // 运动方向  moveType
+            // 总时间 contTime
+            // 总距离 placeEnd
+
+function moveing(obj,moveType,contTime,placeEnd){
+        //步骤1.找到目标对象
+         var circle = document.getElementById(obj);
+        //步骤2.获取目标本身对应的属性值
+        var leftV = circle.currentstyle||document.defaultView.getComputedStyle(circle);
+        //3设置默认参数
+        //3.1设置起点
+        var placeStart = parseInt(leftV[moveType]);
+        //3.3运动的距离
+        var distance = placeEnd - placeStart;
+        //3.4设置单次运动的时间
+        var spaceTime = 10;
+        //3.5设置速度
+        var speed = distance/contTime;
+        //步骤4：让目标对象周期运动
+        var moveId = setInterval(function(){
+            placeStart+=speed*spaceTime;
+            //判断大于总距离时，清除定时器
+            if(placeStart>=placeEnd){
+                clearInterval(moveId);
+            }else{
+                circle.style[moveType] = placeStart+'px';
+            }
+        },spaceTime)
+    }
+
+ 
+    moveing('circle','left',1000,500);
+
+    </script>
+</body>
+</html>
