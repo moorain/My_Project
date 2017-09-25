@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			
+			dl{
+				width: 200px;
+				border-top:solid 1px #ccc;
+				border-left: solid 1px #ccc;
+				border-right: solid 1px #ccc;
+				margin: 100px;
+			}
+			dl dt{
+				width:100%;
+				height:30px;
+				border-bottom: solid 1px #ccc;
+				text-align: center;
+				line-height: 30px;
+				font-size: 16px;
+				font-weight: bold;
+				background-color: #eee;
+				cursor: pointer;
+				position: relative;
+			}
+			
+			dl dt img{
+				position: absolute;
+				right: 5px;
+				top:6px;
+			}
+			
+			dl dd{
+				width:100%;
+				border-bottom: solid 1px #ccc;
+				display: none;
+			}
+			
+			dl dd a{
+				display: block;
+				color: #000;
+				height: 28px;
+				text-decoration: none;
+				border-bottom: solid 1px #eee;
+				text-align: center;
+				line-height: 28px;
+				font-size: 12px;
+			}
+			
+			dl dd a.last{
+				border-bottom: 0;
+			}
+			
+		</style>
+		
+		
+	</head>
+	<body>
+		<dl>
+			<dt>哲学 <img src="img/01.png"/></dt>
+			<dd>
+				<a href="#">体育3</a>
+				<a href="#">体育3</a>
+				<a href="#">体育3</a>
+				<a href="#" class="last">体育3</a>
+			</dd>
+			<dt>经济学 <img src="img/01.png"/></dt>
+			<dd>
+				<a href="#">经济学</a>
+				<a href="#">经济学</a>
+				<a href="#" class="last">经济学</a>
+			</dd>
+			<dt>法学<img src="img/01.png"/></dt>
+			<dd>
+				<a href="#">法学-1</a>
+				<a href="#">法学-2</a>
+				<a href="#" class="last">法学-3</a>
+			</dd>
+			<dt>教育学<img src="img/01.png"/></dt>
+			<dd>
+				<a href="#">教育学-1</a>
+				<a href="#">教育学-2</a>
+				<a href="#" class="last">教育学-3</a>
+			</dd>
+		</dl>
+<script src="js/jquery-1.11.0.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+//	$("dl dt").click(function(){
+//		$(this).next().slideToggle();
+//	});
+	
+	
+	//根据当前点击元素后面的dd的显示和隐藏状态来决定图标的路径
+	$("dl dt").click(function(){
+		if($(this).next().is(":hidden"))
+		{
+			//如果当前元素是隐藏的，执行此处的代码
+			$(this).find("img").prop("src","img/02.png");
+		}
+		else
+		{
+			$(this).find("img").prop("src","img/01.png");
+		}
+		$(this).next().slideToggle();
+	});
+	
+	
+</script>
+		
+	</body>
+</html>
