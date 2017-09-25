@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		
+		#daohang{
+			margin: 100px;
+		}
+		
+		ul{
+			list-style: none;
+			width: 200px;
+			background-color:#FAFAFA;
+			padding: 5px 0;
+			position: relative;
+		}
+		
+		ul li{
+			height: 30px;
+			width: 100%;
+		}
+		
+		ul li p{
+			width:180px;
+			height: 30px;
+			padding-left: 20px;
+			
+		}
+		
+		ul li p a{
+			color: #000000;
+			text-decoration: none;
+			line-height: 30px;
+			font-size: 14px;
+		}
+		
+		ul li div.subnav{
+			width: 1000px;
+			height: 400px;
+			border: solid 1px #ff6600;
+			position: absolute;
+			left: 200px;
+			top: 0;
+			display: none;
+		}
+		
+		ul li.current p{
+			width:180px;
+			border: solid 1px #ff6600;
+			border-right: 0;
+			position: relative;
+			z-index: 100;
+			background-color: white;
+		}
+		
+		ul li.current p a{
+			color: #ff6600;
+			font-size: 16px;
+		}
+		
+		ul li.current div.subnav{
+			display: block;
+		}
+	</style>	
+		
+	</head>
+	<body>
+		
+		<ul id="daohang">
+			<li><p><a href="###">图书、童书</a></p>
+				<div class="subnav">
+					1
+				</div>
+			</li>
+			<li class="current"><p><a href="###">图书、童书</a></p>
+				<div class="subnav">
+					2
+				</div>
+			</li>
+			<li><p><a href="###">图书、童书</a></p>
+				<div class="subnav">
+					3
+				</div>
+			</li>
+			<li><p><a href="###">图书、童书</a></p>
+				<div class="subnav">
+					4
+				</div>
+			</li>
+			<li><p><a href="###">图书、童书</a></p>
+				<div class="subnav">
+					5
+				</div>
+			</li>
+			<li><p><a href="###">图书、童书</a></p>
+				<div class="subnav">
+					6
+				</div>
+			</li>
+			<li><p><a href="###">图书、童书</a></p>
+				<div class="subnav">
+					7
+				</div>
+			</li>
+			<li><p><a href="###">图书、童书</a></p>
+				<div class="subnav">
+					8
+				</div>
+			</li>
+			<li><p><a href="###">图书、童书</a></p>
+				<div class="subnav">
+					9
+				</div>
+			</li>
+			<li><p><a href="###">图书、童书</a></p>
+				<div class="subnav">
+					10
+				</div>
+			</li>
+			<li><p><a href="###">图书、童书</a></p>
+				<div class="subnav">
+					11
+				</div>
+			</li>
+			<li><p><a href="###">图书、童书</a></p>
+				<div class="subnav">
+					12
+				</div>
+			</li>
+			<li><p><a href="###">图书、童书</a></p>
+				<div class="subnav">
+					13
+				</div>
+			</li>
+		</ul>
+		
+		<script src="js/jquery-1.11.0.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$("ul li").mouseenter(function(){
+				$(this).addClass("current").siblings().removeClass("current");
+			});
+		</script>
+	</body>
+</html>
