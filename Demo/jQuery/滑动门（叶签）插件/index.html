@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/sidedoor.css" />
+	</head>
+
+	<body>
+		<!--滑动门-->
+		<div class="sidedoor" id="box11">
+			<ul>
+				<li class="first current">
+					<a href="###">图片</a>
+				</li>
+				<li>
+					<a href="###">专栏</a>
+				</li>
+				<li class="last">
+					<a href="###">焦点</a>
+				</li>
+			</ul>
+			<div class="conbox">
+				<div class="content" style="display: block;">内容111111111111111</div>
+				<div class="content">内容2222222222222222</div>
+				<div class="content">内容33333333333333</div>
+			</div>
+		</div>
+
+		<div class="sidedoor box12">
+			<ul>
+				<li class="first current">
+					<a href="###">图片</a>
+				</li>
+				<li>
+					<a href="###">专栏</a>
+				</li>
+				<li class="last">
+					<a href="###">焦点</a>
+				</li>
+			</ul>
+			<div class="conbox">
+				<div class="content" style="display: block;">内容111111111111111</div>
+				<div class="content">内容2222222222222222</div>
+				<div class="content">内容33333333333333</div>
+			</div>
+		</div>
+
+		<!--说明-->
+
+		<pre>	
+			参数说明：
+    			sideW : 800,//总宽度
+			sideH : 500,//总高度
+			navH : 50,//菜单栏高度
+			navW : 100,//单个菜单宽度
+			licolor : "black",//菜单字体颜色
+			libgcolor : "",//菜单背景
+   		</pre>
+		<script src="js/jquery-1.11.0.js" type="text/javascript" charset="utf-8"></script>
+		<!--引入插件库-->
+		<script src="js/jQuery.slidedoor.V2.0.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$("#box11").sidedoor({
+				sideW: 800, //总宽度
+				sideH: 400, //总高度
+				navH: 50, //菜单栏高度
+				navW: 100, //单个菜单宽度
+				licolor: "black", //菜单字体颜色
+			});
+
+			$(".box12").sidedoor({
+				sideW: 1000, //总宽度
+				sideH: 200, //总高度
+				navH: 50, //菜单栏高度
+				navW: 200 //单个菜单宽度
+			});
+		</script>
+	</body>
+</html>

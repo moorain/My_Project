@@ -18,6 +18,8 @@
 				liCurrent:"red",
 				liBottom:20,
 				btTop:100,
+
+			
 			};
 			var settings = $.extend({}, defaults, opts); //用opts去覆盖defaults中的同名参数
 			//此处写插件的功能，this代表选择器选中的元素。

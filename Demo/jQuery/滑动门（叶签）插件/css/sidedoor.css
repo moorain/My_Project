@@ -1,0 +1,59 @@
+        /*滑动门*/
+       div,ul,li{
+       	padding: 0;
+       	margin: 0;
+       }
+       .sidedoor{
+       	margin: 100px;
+       	background: gainsboro;
+       	width: 601px;
+       	height: 302px;
+       	border: 1px solid #DCDCDC;
+       	border-top: 0;
+       	border-bottom: 0;
+       }
+       .sidedoor ul{
+       	background: #F8F8F8;
+       	width: 600px;
+       	height:50px;
+        border: 1px solid #DCDCDC;
+       	border-left:0 ;
+       	border-right:0;
+       }
+        .sidedoor ul li{
+   			z-index: 1;
+        	float: left;
+        	list-style: none;
+        	width: 150px;
+        	text-align: center;
+        	line-height: 51px;
+        	border-top: 3px solid transparent;
+        }
+         .sidedoor ul li a{
+         	color: #000;
+         	text-decoration: none;
+         }
+         .sidedoor ul li a:hover{
+         	color: #FF8400;
+         }
+         .sidedoor ul li.last{
+        	border-right: 0;
+        }
+        /*当前菜单li效果*/
+        .sidedoor ul li.current{
+        	border-top: 3px solid #ff8400;
+        	background: white;
+        	border-right: 1px solid #dbdee1;
+        	border-left: 1px solid #dbdee1;
+        	border-bottom: 0;
+        }
+         .sidedoor ul li.first{
+        	border-left: 0;
+        }
+        /*内容区*/
+       .sidedoor .content{
+       	background: white;
+       	width: 100%;
+       	height: 250px;
+       	display: none;
+       }
