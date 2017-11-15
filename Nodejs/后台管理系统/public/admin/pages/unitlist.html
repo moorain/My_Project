@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>学校食堂安全管理系统v1.0</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- MetisMenu CSS -->
+    <link href="../vendor/metisMenu/metisMenu.min.css" rel="stylesheet">
+
+    <!-- DataTables CSS -->
+    <link href="../vendor/datatables-plugins/dataTables.bootstrap.css" rel="stylesheet">
+
+    <!-- DataTables Responsive CSS -->
+    <link href="../vendor/datatables-responsive/dataTables.responsive.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="../dist/css/sb-admin-2.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" type="text/css" href="../dist/css/extendcss.css"/>
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->  <!-- jQuery -->
+  <script src ="../vendor/jquery/jquery.min.js"></script>
+  <!-- cookie验证 -->
+  <script src = "/checkuser.html"></script>
+  <!-- 模版引擎 -->
+  <script src="../dist/js/template.js"></script>
+
+</head>
+
+<body>
+    <div id="wrapper">
+        <!-- Navigation -->
+        <script type="text/javascript" src="./menu.js"></script>
+        <div id="page-wrapper">
+           <div class="row">
+                <div class="col-lg-12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading row">
+                           	<div class="col-sm-6"> 当前位置: 基础数据 >单位管理</div>
+                           	<div class="col-sm-6"><div class="optiondiv"><button type="button" class="btn btn-primary btn-sm" id="btncreate">新增</button>&nbsp;<button type="button" class="btn btn-primary btn-sm" id="btnedit">编辑</button>&nbsp;<button id="delete_base" type="button" class="btn btn-primary btn-sm">删除</button></div></div>
+                        </div>
+                        <!-- /.panel-heading -->
+                        <div class="panel-body">
+                            <table width="100%" class="table table-striped table-bordered table-hover" id="dataTables-example">
+                                <thead>
+                                    <tr>
+                                        <th class="center"><input type="checkbox" id="cball"/></th>
+                                        <th class="center">单位名称</th>
+                                        <th class="center">简码</th>
+                                        <th class="center">单位地址</th>
+                                        <th class="center">联系人</th>
+                                        <th class="center">联系电话</th>
+                                        <th class="center">排序</th>
+                                        
+                                    </tr>
+                                </thead>
+                                <tbody id="mylist">
+                                    <tr class="odd gradeX">
+                                    	<td class="center"><input type="checkbox" /></td>
+                                        <td>武胜县双兴商贸有限公司</td>
+                                        <td>WSXSM</td>
+                                        <td>武胜县成双路1号</td>
+                                        <td>张三</td>
+                                        <td>15989890101</td>
+                                        <td>1</td>                                        
+                                    </tr>
+
+
+                                </tbody>
+                            </table>
+                            <!-- /.table-responsive -->
+                             <div class="row"><div class="col-sm-6"><div class="dataTables_info" id="dataTables-example_info" role="status" aria-live="polite">显示第 1 至 5 项记录，共 5 项</div></div><div class="col-sm-6"><div class="dataTables_paginate paging_simple_numbers" id="dataTables-example_paginate"><ul class="pagination"><li class="paginate_button previous disabled" aria-controls="dataTables-example" tabindex="0" id="dataTables-example_previous"><a href="#">上页</a></li><li class="paginate_button active" aria-controls="dataTables-example" tabindex="0"><a href="#">1</a></li><li class="paginate_button next disabled" aria-controls="dataTables-example" tabindex="0" id="dataTables-example_next"><a href="#">下页</a></li></ul></div></div></div>
+                        </div>
+                        <!-- /.panel-body -->
+                    </div>
+                    <!-- /.panel -->
+                </div>
+                
+                <!-- /.col-lg-12 -->
+            </div>
+           
+          
+          
+        </div>
+      
+
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- jQuery -->
+    <script src="../vendor/jquery/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Metis Menu Plugin JavaScript -->
+    <script src="../vendor/metisMenu/metisMenu.min.js"></script>
+
+    <!-- DataTables JavaScript -->
+    <script src="../vendor/datatables/js/jquery.dataTables.min.js"></script>
+    <script src="../vendor/datatables-plugins/dataTables.bootstrap.min.js"></script>
+    <script src="../vendor/datatables-responsive/dataTables.responsive.js"></script>
+
+    <script src="../dist/js/sb-admin-2.js"></script>
+    <script src="../dist/js/sea.js"></script>
+
+<script type="text/html" id="mylists">
+    {{each list as v i}}
+    <tr class="odd gradeX">
+            <td class="center"><input type="checkbox" id = "{{v._id}}" /></td>
+            <td>{{v.unit_name}}</td>
+            <td>{{v.unit_num}}</td>
+            <td>{{v.unit_adress}}</td>
+            <td>{{v.contact}}</td>
+            <td>{{v.phone_num}}</td>
+            <td>{{v.unit_code}}</td>                                        
+    </tr>
+    {{/each}}
+</script>
+    <script>
+    //渲染数据 
+    function addlist(){
+        // 发起请求获取数据库数据
+        $.get('/database/addlist.html',function(data){
+            // console.log(data);
+           var html = template('mylists',{'list':data})
+           $("#mylist").html(html);  
+        })
+    }
+    addlist();
+    
+
+    // 删除
+    $("#delete_base").click(function(){
+       // 获取选中第一项的id
+        var delete_id = [];
+        var check_box = $("#mylist").find("input");
+        for(var i= 0 ;i<check_box.length;i++){
+            if(check_box[i].checked){
+                var _id = check_box[i].id;
+                delete_id.push(_id);
+            }
+        }
+        // console.log(delete_id);
+        $.post('/database/delete_base.html',{"arr":delete_id},function(data){
+            // console.log(data);
+            if(data == '1'){
+                alert('删除成功!')
+                // 重新渲染一次....
+                addlist();
+            }else{
+                alert('删除失败!')
+            }
+        })
+
+
+
+
+    })
+    </script>
+    <script>
+
+		$("#cball").click(function(){
+			$("input[type='checkbox']").not(this).prop("checked",$(this).prop("checked"));
+		});
+
+		seajs.config({
+		  alias: {
+		    "jquery": "jquery-1.10.2.js"
+		  }
+        });
+        
+		seajs.use(['jquery', 'dialog-plus'], function ($, dialog) {
+			$('#btncreate').on('click', function () {
+				//构造表单
+				jQuery.get("supplierform1.html",function(data){
+    				var d = dialog({
+						title: '创建单位',
+						content:data,
+						width:500,
+						okValue: '确 定',
+						ok: function () {
+                            // 获取数据
+                            var unit_name = $("#unit_name").val()
+                            var  unit_num = $("#unit_num").val()
+                            var unit_adress = $("#unit_adress").val()
+                            var contact = $("#contact").val()
+                            var phone_num = $("#phone_num").val()
+                            var unit_code = $("#unit_code").val()
+                            // console.log(unit_name,unit_num,unit_adress,contact,phone_num,unit_code)
+                            var datas={
+                                "unit_name":unit_name,
+                                "unit_num":unit_num,
+                                "unit_adress":unit_adress,
+                                "contact":contact,
+                                "phone_num":phone_num,
+                                "unit_code":unit_code
+                            };
+                            // console.log(data)
+                            data = String(data);
+                            $.post('/database/data_add.html',datas,function(data){
+                                console.log(data);
+                                if(data == '1'){
+                                    addlist();
+                                }
+                            })
+						},
+						cancelValue: '取消',
+						cancel: function () {}
+					});
+		
+					d.showModal();
+    			});				
+			});
+			
+			$('#btnedit').on('click', function () {
+                // 获取选中第一项的id
+                var check_box = $("#mylist").find("input");
+                for(var i= 0 ;i<check_box.length;i++){
+                    if(check_box[i].checked){
+                        var _id = check_box[i].id;
+                        break;
+                    }
+                }
+                console.log(_id);
+
+
+				//构造表单
+				jQuery.get("supplierform1.html",function(data){
+                    // 通过id获取数据 -- 回填数据
+                    $.get('/database/edit_base.html?id='+_id,function(data){
+                        $("#unit_name").val(data.unit_name)
+                        $("#unit_num").val(data.unit_num)
+                        $("#unit_adress").val(data.unit_adress)
+                        $("#contact").val(data.contact)
+                        $("#phone_num").val(data.phone_num)
+                        $("#unit_code").val(data.unit_code)
+                    })
+                    
+    				var d = dialog({
+						title: '编辑单位',
+						content:data,
+						width:500,
+						okValue: '确 定',
+						ok: function () {
+                            // 获取修改好的数据
+                            // 获取数据
+                            var unit_name = $("#unit_name").val()
+                            var  unit_num = $("#unit_num").val()
+                            var unit_adress = $("#unit_adress").val()
+                            var contact = $("#contact").val()
+                            var phone_num = $("#phone_num").val()
+                            var unit_code = $("#unit_code").val()
+                            // console.log(unit_name,unit_num,unit_adress,contact,phone_num,unit_code)
+                            var datas={
+                                "id":_id,
+                                "unit_name":unit_name,
+                                "unit_num":unit_num,
+                                "unit_adress":unit_adress,
+                                "contact":contact,
+                                "phone_num":phone_num,
+                                "unit_code":unit_code
+                            };
+                            // console.log(datas);
+                            // console.log(_id);
+                            $.post('/database/edit_save.html',datas,function(data){
+                                // console.log(data);
+                                if(data == '1'){
+                                    addlist();
+                                }
+                            })
+						},
+						cancelValue: '取消',
+						cancel: function () {}
+					});
+					d.showModal();
+                });	
+			});
+		});
+</script>
+
+
+
+</body>
+
+</html>

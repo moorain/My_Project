@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>学校食堂安全管理系统v1.0</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- MetisMenu CSS -->
+    <link href="../vendor/metisMenu/metisMenu.min.css" rel="stylesheet">
+
+    <!-- DataTables CSS -->
+    <link href="../vendor/datatables-plugins/dataTables.bootstrap.css" rel="stylesheet">
+
+    <!-- DataTables Responsive CSS -->
+    <link href="../vendor/datatables-responsive/dataTables.responsive.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="../dist/css/sb-admin-2.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" type="text/css" href="../dist/css/extendcss.css"/>
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  <!-- jQuery -->
+  <script src ="../vendor/jquery/jquery.min.js"></script>
+  <!-- cookie验证 -->
+  <script src = "/checkuser.html"></script>
+  <!-- 模版引擎 -->
+  <script src="../dist/js/template.js"></script>
+</head>
+
+<body>
+    <div id="wrapper">
+        <script type="text/javascript" src="./menu.js"></script>
+        <div id="page-wrapper">
+           <div class="row">
+                <div class="col-lg-12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading row">
+                           	<div class="col-sm-6"> 当前位置: 系统管理 >用户管理</div>                           	
+                           	<div class="col-sm-6"><div class="optiondiv"><button type="button" class="btn btn-primary btn-sm" id="btncheck">审核</button>&nbsp;<button type="button" class="btn btn-primary btn-sm" id="btncreate">新增</button>&nbsp;<button type="button" class="btn btn-primary btn-sm" id="btnedit">编辑</button>&nbsp;<button type="button" class="btn btn-primary btn-sm" id="btndelete">删除</button></div></div>
+                        </div>
+  						<div class="row panel-body">
+                           	<form class="form-inline" role="form">
+							  <div class="form-group">
+							   <div class="input-group">
+							      <div class="input-group-addon">所在部门</div>
+							       <select class="form-control" id="department">
+							       		<option>全部</option>
+							       		<option>教学部</option>
+							            <option>就业部</option>
+							            <option>学工部</option>            
+							            <option>财务部</option>
+							            <option>行政部</option>
+							        </select>
+							    </div>
+							  </div>
+							  <div class="form-group">
+							   <div class="input-group">
+							      <div class="input-group-addon">角色组</div>
+							       <select class="form-control" id="user_role">
+							            <option>全部</option>
+							            <option>超级管理员</option>
+							            <option>普通用户</option>
+							        </select>
+							    </div>
+							  </div>
+							  <div class="form-group">
+							    <div class="input-group">
+							      <div class="input-group-addon">登录账号：</div>
+							      <input class="form-control" type="text" id="finduser" placeholder="登录账号">
+							    </div>
+							  </div>
+							  <button type = "button" id="finduserbtn" class="btn btn-default">查询</button>
+							</form>
+                        </div>
+                        <div class="panel-body">
+                            <table width="100%" class="table table-striped table-bordered table-hover" id="dataTables-example">
+                                <thead>
+                                    <tr>
+                                        <th class="center"><input type="checkbox" id="cball"/></th>
+                                        <th>用户账号</th>
+                                        <th>用户名称</th>
+                                        <th>所属角色</th>
+                                        <th>所属部门</th>
+                                        <th>是否启用</th>
+                                        <th>排序</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="_mylist">
+                                   <!-- 用户列表 -->
+                                </tbody>
+                            </table>
+                             <div class="row"><div class="col-sm-6">
+                                 <div class="dataTables_info" id="dataTables-example_info" role="status" aria-live="polite">显示第 <span id="_num1">1</span> 至 <span id="_num2">5</span> 项记录，共 <span id="_tote">5</span>项</div></div><div class="col-sm-6"><div class="dataTables_paginate paging_simple_numbers" id="dataTables-example_paginate">
+                                     <ul class="pagination">
+                                        <!-- 页码 -->
+                                    </ul>
+                                </div></div></div>
+                            </div>
+                    </div>
+                </div>
+            </div>           
+        </div>
+    </div>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+    <!-- Metis Menu Plugin JavaScript -->
+    <script src="../vendor/metisMenu/metisMenu.min.js"></script>
+    <!-- DataTables JavaScript -->
+    <script src="../vendor/datatables/js/jquery.dataTables.min.js"></script>
+    <script src="../vendor/datatables-plugins/dataTables.bootstrap.min.js"></script>
+    <script src="../vendor/datatables-responsive/dataTables.responsive.js"></script>
+    <script src="../dist/js/sb-admin-2.js"></script>
+    <script src="../dist/js/sea.js"></script>
+    <script type="text/html" id="mylist">
+        {{each list as v i}}
+        <tr class="odd gradeX">
+            <td class="center"><input class = "id_box" type="checkbox" value = "{{v._id}}"/></td>
+            <td>{{v.address}}</td>
+            <td>{{v.username}}</td>
+            <td>{{v.role}}</td>
+            <td class="center">{{v.branch}}</td>
+            <td class="center"><input type="checkbox" {{v.isopen ? "checked" : ""}} disabled="disabled"/></td>
+            <td>{{v.tbnumber}}</td>                           
+        </tr>
+        {{/each}}
+    </script>
+    <script type="text/javascript">
+    // 渲染用户列表
+    // 页面加载完成运行一次...
+    (function(){
+        addlist(1);
+    })();
+
+    function addlist(n){
+        window.page = n?n:window.page;
+        $.ajax({
+            type: "get",
+            url: "/show_page.html?page="+page, 
+            dataType: "json",
+            success: function (data) {
+                // 将附带在数组最后的tote和pagecount去掉
+                // 获取总数量 添加到html中
+                var tote = data.pop();
+                
+                $("#_tote").html(tote.tote);//总数
+                // 显示第 ... 至 ... 项记录，共 ..项
+                var pagesize = tote.pagesize;
+                var num1,num2;
+                if(page == 1){
+                    num1 = 1;
+                    num2 = pagesize;
+                }else{
+                    num1 = (page-1)*pagesize+1;
+                    if(tote.tote <= page*pagesize){
+                        num2 = tote.tote;
+                    }else{
+                        num2 = page*pagesize;
+                    }
+                }
+                $("#_num1").html(num1);
+                $("#_num2").html(num2);
+                // 获取页数
+                var pagecount = data.pop()
+                // 渲染列表
+                var html = template('mylist',{'list':data})
+                $("#_mylist").html(html);
+                // 打印页码表....
+                var txt = '';
+                // 显示上一页
+                txt += '<li class="paginate_button previous"  tabindex="0" id="dataTables-example_previous"><a href="javascript:addlist('+(page-1)+')">上页</a></li>';  
+                // 遍历 页码...
+                for( var i = 1;i<=pagecount.pagecount;i++){
+                   if(page == i){
+                        txt += '<li class="paginate_button active" tabindex="0"><a href="javascript:addlist('+i+')">'+i+'</a></li>'
+                   }else{
+                        txt += '<li class="paginate_button " tabindex="0"><a href="javascript:addlist('+i+')">'+i+'</a></li>'
+                   }
+                }
+                //显示下一页:   
+                if(page<pagecount.pagecount){
+                    txt += ' <li class="paginate_button next"  tabindex="0" id="dataTables-example_next"><a href="javascript:addlist('+(page+1)+')">下页</a></li>';  
+                }else{
+                    txt += ' <li class="paginate_button next"  tabindex="0" id="dataTables-example_next"><a href="javascript:addlist('+(page)+')">下页</a></li>';  
+                }
+                // 渲染html
+                $('.pagination').html(txt);
+            }
+        })
+    }
+    </script>
+    <script>
+		$("#cball").click(function(){
+			$("input[type='checkbox']").not(this).prop("checked",$(this).prop("checked"));
+		});
+		seajs.config({
+		  alias: {
+		    "jquery": "jquery-1.10.2.js"
+		  }
+		});
+		seajs.use(['jquery', 'dialog-plus'], function ($, dialog) {
+			$('#btncreate').on('click', function () {
+				//构造表单
+				jQuery.get("userform.html",function(data){
+    				var d = dialog({
+						title: '创建用户',
+						content:data,
+						width:500,
+						okValue: '确 定',
+						ok: function () {
+                            // 获取数据
+                            var address = $("#tbunitname").val();
+                            var username = $("#tbaddress").val();
+                            var password = $("#tbpassword").val();
+                            var tbnumber = $("#tbnumber").val();
+                            var role = $("#role").val();
+                            var branch = $("#branch").val();
+                            var isopen = $("#isopen").is(':checked');
+                            // console.log(address,username,password,tbnumber,role,branch,isopen);
+                            $.ajax({
+                                type:"post",
+                                url:'/adduser.html',
+                                data:{
+                                "address":address,
+                                "username":username,
+                                "password":password,
+                                "tbnumber":tbnumber,
+                                "role":role,
+                                "branch":branch,
+                                "isopen":isopen
+                                },
+                                dataType: 'json',
+                                success: function (data) {
+                                    // console.log(data);
+                                }
+                            })
+                            addlist();
+						},
+						cancelValue: '取消',
+						cancel: function () {}
+					});
+					d.showModal();
+    			});				
+            });
+        
+//删除
+    btndelete.onclick = function(){
+        var id_box = $('.id_box');
+        // console.log(id_box);
+        // 定义一个数组存储选中的id
+        var arr = [];
+        for(var i = 0;i<id_box.length;i++){
+            // console.dir(id_box[i].checked)
+            if(id_box[i].checked){
+                arr.push(id_box[i].value);
+            }
+        }
+        // 如果没有数据的时候 .证明一个都没勾选,弹出提示框
+        if(arr.length == 0){
+            alert("请选择需要删除的数据!")
+            return false;//结束函数....
+        }
+        
+        // console.log(arr);
+        // 发送一个ajax请求 将获取到的id的集合(选中的)传给后端
+        $.post('/user_del.html',{"arr":arr},function(data){
+            // console.log(data);
+            if(data == '1'){
+                alert('删除成功!')
+                // 重新渲染一次....
+                addlist();
+            }else{
+                alert('删除失败!')
+            }
+        })
+    }
+
+// 编辑
+    $('#btnedit').on('click', function () {
+        // 获取选中项的id
+        var id_box = $('.id_box');
+        for(var i = 0;i<id_box.length;i++){
+            if(id_box[i].checked){
+                var _id = id_box[i].value;
+                break;
+            }
+        }
+        // 判断选中项
+        if(!_id){
+            alert("请选择要修改的对象!");
+            return false;
+        }
+        //构造表单
+        jQuery.get("userform.html",function(data){
+            //将得到的id传送给后端获取数据......
+            $.get('/edit_user.html?id='+_id,function(data){
+                // 将数据回填
+                $("#tbunitname").val(data.address);
+                $("#tbaddress").val(data.username);
+                $("#tbpassword").val(data.password);
+                $("#tbnumber").val(data.tbnumber);
+                $("#role").val(data.role);
+                $("#branch").val(data.branch);
+                $("#isopen").prop("checked",data.isopen);
+            })
+            var d = dialog({
+                    title: '编辑用户',
+                    content:data,
+                    width:500,
+                    okValue: '确 定',
+                    ok: function () {
+                        // console.log(_id)
+                        // 获取数据
+                        var user_id = _id;
+                        var address = $("#tbunitname").val();
+                        var username = $("#tbaddress").val();
+                        var password = $("#tbpassword").val();
+                        var tbnumber = $("#tbnumber").val();
+                        var role = $("#role").val();
+                        var branch = $("#branch").val();
+                        var isopen = $("#isopen").is(':checked');
+                        // console.log(address,username,password,tbnumber,role,branch,isopen);
+                        $.ajax({
+                            type:"post",
+                            url:'/edituser_save.html',
+                            data:{
+                            "userid":user_id,
+                            "address":address,
+                            "username":username,
+                            "password":password,
+                            "tbnumber":tbnumber,
+                            "role":role,
+                            "branch":branch,
+                            "isopen":isopen
+                            },
+                            dataType: 'json',
+                            success: function (data) {
+                                if(data == '1'){
+                                    // 重新渲染一次......
+                                    addlist();
+                                }
+                            }
+                        })
+                    },
+                    cancelValue: '取消',
+                    cancel: function () {}
+                });
+            d.showModal();
+        });
+    });
+
+    // 查询
+    $("#finduserbtn").click(function(){
+        // 获取查询的三个条件
+        var findname = $("#finduser").val();//查询框
+        var part =$("#department") .val();//部门
+        var userrole = $("#user_role").val();//角色
+        $.post('/search.html',{
+            "part":part,
+            "userrole":userrole,
+            "findname":findname
+        },function(data){
+            // console.log(data);
+            var html = template('mylist',{'list':data})
+            $("#_mylist").html(html);
+        })
+    })
+
+});
+</script>
+</body>
+</html>
