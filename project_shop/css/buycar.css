@@ -1,0 +1,124 @@
+#logo{
+	bottom: 7px;
+}
+#doname{
+	left: 265px;
+}
+#searchbox{
+	top: 8px;
+	right: 10px;
+}
+.addressbox{
+	width: 224px;
+	height: 22px;
+	color: #4c4c4c;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+}
+.addressbox .address{
+	width: 172px;
+	height: 22px;
+	border: 1px solid #d9d9d9;
+	outline: none;
+}
+#order_form{
+	margin-top:24px ;
+}
+#order_form p.title{
+
+	font-size: 20px;
+	color: #666;
+}
+#order_form table,#order_form table tr,#order_form table tr td{
+	border: 0;
+}
+#order_form table tr{
+	display: block;
+	width: 1200px;
+	position: relative;
+	border-bottom: 1px solid #ccc;
+	padding-bottom: 20px;
+}
+.table_title td{
+	height: 60px;
+}
+#order_form table tr td.td1{
+	width: 235px;
+}
+#order_form table tr td.td2{
+	width: 412px;
+}
+#order_form table tr td.td3{
+	width: 114px;
+}
+#order_form table tr td.td4{
+	width: 124px;
+}
+#order_form table tr td.td5{
+	width: 164px;
+}
+#order_form table tr td.td6{
+	width: 150px;
+	text-align: left;
+}
+#order_form table tr td.td6 a{
+	color: #808080;
+}
+#order_form table tr.table_title{
+		text-indent: 20px;
+	font-size: 18px;
+	color: #808080;
+	height: 60px;
+	background: #e6e6e6;
+	margin-bottom:20px ;
+}
+#order_form table tr.bdtop6{
+	border-top: 6px solid #CCCCCC;
+}
+#order_form table tr td{
+	position: relative;
+}
+#order_form table tr td .all{
+	width: 18px;
+	height: 18px;
+	border: 1px solid #ccc;
+	position: absolute;
+	top: 20px;
+	left: 18px;
+	
+}
+#order_form table tr td img{
+	margin-top: 21px;
+	margin-left: 74px;
+	border: 1px solid #ccc;
+}
+#order_form table .tr1 td p{
+	position: absolute;
+	left: 20px;
+	top: 43px;
+	font-size: 16px;
+	color: #4c4c4c;
+}
+#order_form table .tr1 td .buy_num{
+	width: 124px;
+	height: 26px;
+	left: 0;
+}
+.buy_num .num{
+	width: 72px;
+	height: 22px;
+	float: left;
+	border: 0;
+	border-bottom: 1px solid #ccc;
+	border-top: 1px solid #ccc;
+	text-align: center;
+	outline: none;
+}
+.buy_num .add,.buy_num .reduce{
+	float: left;
+	width: 24px;
+	height: 24px;
+	border: 1px solid #ccc;
+	outline: none;
+}

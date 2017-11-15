@@ -1,0 +1,110 @@
+﻿			.pptbox{
+				width: 400px;
+				height: 100px;
+				position: relative;
+				overflow: hidden;
+			}
+			.pptbox  .innerwrapper{
+				width:2400px;/*当增加了li之后，大盒子的宽度也要相应的增加 这里增加了两个li，每个400，所以ul 从原来的1600变成了2400*/
+				height: 100px;
+				list-style: none;
+				position: absolute;
+				left: -400px;
+			}
+			.innerwrapper li
+			{
+				width:400px;
+				height:100px;
+				float: left;
+			}
+			.innerwrapper li a
+			{
+				display: block;
+			}
+			.innerwrapper li a img
+			{
+				width: 400px;
+				height:100px;
+				display:block;
+			}
+			.btnleft{
+				width: 36px;
+				height: 70px;
+				position: absolute;
+				left:0;
+				top:25px;
+				background-color: black;
+				background-image:url(../img/nav.png);
+				background-position: -4px 12px;
+				background-repeat: no-repeat;
+				cursor: pointer;
+				z-index: 100;
+			}
+			.btnright{
+				width: 36px;
+				height: 70px;
+				position: absolute;
+				right:0;
+				top:25px;
+				background-color: black;
+				background-image:url(../img/nav.png);
+				background-position: -46px 14px;
+				cursor: pointer;
+				z-index: 100;
+				background-repeat: no-repeat;
+			}
+			/*控制按钮开始*/
+			.controls{
+				width:96px;
+				position: absolute;
+				left:152px;
+				bottom:10px;
+				list-style: none;
+			}
+			.controls li{
+				width: 20px;
+				height:20px;
+				background-color: gold;
+				float: left;
+				margin-right:2px;
+				text-align: center;
+				line-height: 25px;
+				border-radius:10px ;
+				cursor: pointer;
+				color: white;
+				margin-right:10px;
+			}
+			.controls li.current
+			{
+				background-color:aqua;
+				color: white;
+			}
+			/*控制按钮结束*/
+			
+			/*电子书轮播*/
+			.ebo .controls{
+				width:96px;
+				position: absolute;
+				left:152px;
+				bottom:10px;
+				list-style: none;
+				z-index:100;
+			}
+			.ebo .controls li{
+				margin:0 5px;
+			}
+			.controls li.current
+			{
+				background-color:aqua;
+				color: white;
+			}
+			
+			/*按钮颜色*/
+				.btncolor span.btnleft,.btncolor span.btnright
+			{
+				background-color:#cccccc;
+			}
+
+			/*控制按钮结束*/
+			/*服装*/
+			

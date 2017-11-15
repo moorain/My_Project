@@ -1,0 +1,319 @@
+#logo{
+	bottom: 7px;
+}
+#pptrightlist{
+	height: 430px;
+	position: relative;
+	padding-bottom: 10px;
+}
+#pptrightlist .rank_title{
+	padding-left: 10px;
+	width: 190px;
+	position: absolute;
+	top: 0;
+	right: 0;
+	height: 30px;
+	background: #93d46f;
+	line-height: 30px;
+	font-size: 18px;
+	color: #fff;
+}
+#ppt{
+	width: 1000px;
+	height: 400px;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+#rank{
+	width: 200px;
+	position: absolute;
+	top: 30px;
+	right: 0;
+}
+#rank li{
+	height: 42px;
+	overflow: hidden;
+	border-bottom: 2px solid #ccc;
+}
+#rank li.last{
+	border-bottom: 0;
+	
+}
+#rank li.current{
+	height: 140px;
+}
+.bookbox{
+	position: relative;
+	width: 200px;
+	height: 140px;
+}
+.bookbox span{
+	display: block;
+	width: 20px;
+	height: 20px;
+	background: #b3b3b3;
+	line-height: 20px;
+	font-size: 16px;
+	text-align: center;
+	color: white;
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+.bookbox p{
+	padding-top: 4px;
+	line-height: 20px;
+	width: 104px;
+	position: absolute;
+	right: 0;
+	top: 20px;
+}
+/*广告区1*/
+#banner2{
+	height: 90px;
+}
+/*图书折扣*/
+#booksale{
+	height: 620px;
+}
+#booksale_title{
+	padding-top:25px ;
+}
+#booksalelist li{
+	width: 240px;
+	height: 256px;
+	background-color: white;
+	float: left;
+}
+#booksalelist li .bookpic{
+	margin: 5px 30px 0 30px;
+}
+#booksalelist li .p1{
+	width: 210px;
+	font-size: 14px;
+	color: #333;
+	line-height: 20px;
+}
+#booksalelist li .p2{
+	color:#f4290d;
+	font-size: 14px;
+}
+#booksalelist li .p3{
+	line-height: 28px;
+	font-size: 24px;
+	color: #f4290d;
+}
+#booksalelist li .p3 span{
+	color:#c0c0c0;
+	text-decoration: line-through;
+}
+/*新书*/
+#newbook{
+	height: 580px;
+	position: relative;
+}
+#newbook .newbook_left{
+	width: 900px;
+	height: 576px;
+
+}
+#newbooklist{
+	height: 488px;
+	padding-top: 14px;
+	border: 2px solid #BFBFBF;
+	border-top: 0;
+	overflow: hidden;
+}
+.liststyle li{
+	float: left;
+	width: 139px;
+	height: 250px;
+	padding: 0 20px;
+}
+.liststyle li .p1{
+	color: #333;
+	font-size: 14px;
+}
+.liststyle li .p2{
+	color: #808080;
+	font-size: 14px;
+	line-height: 28px;
+	height: 28px;
+}
+.liststyle li .p3{
+	color: #f91616;
+	font-size: 18px;
+}
+.liststyle li p span{
+	text-decoration: line-through;
+	color: #b2b2b2;
+}
+/*新书 排行*/
+.newbook_right{
+	width: 280px;
+	height: 510px;
+	float: right;
+	/*background: green;*/
+	position: absolute;
+	right: 0;
+	top: 38px;
+}
+.newbook_right .newbook_right_title{
+	font-size: 24px;
+	color: #808080;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+}
+#ebook_right{
+	width: 284px;
+	height: 505px;
+	position: absolute;
+	right: 0;
+	top: 0;
+	border: 2px solid #CCCCCC;
+}
+#ebook_right p.ebooktitle{
+	height: 40px;
+	font-size: 24px;
+	color: #808080;
+	text-align: center;
+	line-height: 40px;
+}
+#ebook_right ul{
+	height: 435px;
+}
+#ebook_right ul li .cssa{
+	width: 284px;
+	height: 40px;
+}
+#ebook_right ul li .cssa span{
+	float: left;
+	width: 22px;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	font-size: 16px;
+}
+#ebook_right ul li .cssa a{
+	float: left;	
+	display: block;
+	width: 262px;
+	height: 40px;
+	line-height: 40px;
+	font-size: 16px;
+	color: #4c4c4c;
+	border-bottom: 2px solid #e6e6e6;
+}
+#ebook_right ul li .cssb span{
+	display: block;
+	float: left;
+	float: left;
+	width: 22px;
+	height: 145px;
+	text-align: center;
+	font-size: 16px;
+}
+#ebook_right ul li .cssb img{
+	float: left;
+	border-bottom: 2px solid #e6e6e6;
+	padding-bottom: 3px;
+}
+#ebook_right ul li .cssb p{
+	float: left;
+	width: 126px;
+	height: 145px;
+	font-size: 13px;
+	line-height: 17px;
+	padding: 5px 14px 0 10px;
+	border-bottom: 2px solid #e6e6e6;
+}
+#ebook_right ul li .last a,#ebook_right ul li .last p,#ebook_right ul li .last img{
+	border-bottom: 0;
+}
+/*排行特效样式*/
+#ebook_right ul li .cssa{
+	display: block;
+}
+#ebook_right ul li .cssb{
+	display: none;
+}
+
+/*独家提供*/
+#tap{
+	position: relative;
+	height: 538px;
+}
+#tap>ul{
+	width: 675px;
+	height: 35px;
+	position: absolute;
+	top: -41px;
+	right: 0;
+}
+#tap ul li{
+	height: 35px;
+	line-height:35px;
+	float:left;
+	padding: 0 15px;
+	font-size: 18px;
+	color: #333;
+}
+#tap>ul li.current3{
+	background: #FF6600;
+	color: white;
+}
+
+/*轮播内容*/
+.alone_ul{
+	margin-top: 20px;
+	position: relative;
+}
+.alone_pic{
+	float: left;
+	padding: 0 11px;
+	width: 170px;
+	height: 220px;
+}
+.alone_left{
+	margin-left: 40px;
+}
+.alone_ppt .controls{
+	z-index: 100;
+	margin-top: 500px;
+}
+
+
+/*猜你喜欢*/
+#guessyou{
+	height: 745px;
+}
+#guessyou_list{
+	height: 530px;
+	padding-top: 10px;
+}
+#guessyou_list li{
+	padding:10px 30px;
+	height: 240px;
+}
+
+#guessyou_list2{
+	border-top: 1px solid #ccc;
+	height: 156px;
+}
+#guessyou_list2 li{
+	float: left;
+	padding: 40px 9px 26px 9px;
+}
+
+#banner3 img{
+	display: block;
+}
+#footer .footer_line{
+	padding-top: 0;
+}
+#footer .gototop{
+	right: 24px;
+	top: -50px;
+}
