@@ -1,0 +1,10 @@
+body {
+  background-color: red;
+}
+body div {
+  color: pink;
+}
+body p {
+  color: blue;
+  font-size: 20px;
+}

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        nav{
+            margin: 200px;
+        }
+        nav>ul>li{
+            position: relative;
+            overflow: hidden;
+            list-style: none;
+            float: left;
+            width: 100px;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            border: 1px solid #ccc;
+            border-right: 0;
+        }
+        nav>ul>li:hover{
+            background-color: #eee;
+        }
+        nav>ul>li:nth-child(5){
+            border-right: 1px solid #ccc;
+        }
+        .line{
+            position: absolute;
+            left: -100px;
+            top: 0;
+            display: inline-block;
+            transition: all 1s;
+            width: 100px;
+            border-top: 4px solid blueviolet;
+        }
+
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li data-num = "1"><span  class="line"></span>1111</li>
+            <li data-num = "2"><span  class="line"></span>2222</li>
+            <li data-num = "3"><span  class="line"></span>3333</li>
+            <li data-num = "4"><span  class="line"></span>4444</li>
+            <li data-num = "5"><span  class="line"></span>5555</li>
+        </ul>
+    </nav>
+    <script>
+    var lilist = document.getElementsByTagName('li');
+    var line = document.getElementById('line');
+    for(var i = 0;i<lilist.length;i++){
+        lilist[i].onmouseenter = function(){
+              var sp = this.getElementsByClassName("line");
+              sp[0].style.left = 0 +"px";
+            }
+        lilist[i].onmouseleave = function(){
+            var sp = this.getElementsByClassName("line");
+              sp[0].style.left = -100 +"px";
+        }
+    }  
+    </script>
+</body>
+</html>
