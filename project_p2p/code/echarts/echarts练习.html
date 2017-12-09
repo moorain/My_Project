@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <title>ECharts</title>
+    <link href="https://cdn.bootcss.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+
+    <div class="row">
+        <div class=" col-sm-7 ">
+            <div id="main" style="height:400px"></div>
+        </div>
+        <div class=" col-sm-5 ">
+            <div id="main2" style="height:400px">1</div>
+        </div>
+    </div>
+
+    <div id="main3" style="height:400px ;width:500px;"></div>
+
+    <script src="https://cdn.bootcss.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <!-- ECharts单文件引入 -->
+    <script src="https://cdn.bootcss.com/echarts/3.8.5/echarts.min.js"></script>
+    <script type="text/javascript">
+        /*     $.get("./data.json",function(data){
+                                console.log(data);
+                            }) */
+        // 基于准备好的dom，初始化echarts图表
+        var myChart = echarts.init(document.querySelector('#main'));
+        var myChart2 = echarts.init(document.querySelector('#main2'));
+        var myChart3 = echarts.init(document.querySelector('#main3'));
+
+
+        var option = {
+            tooltip: {
+                show: true
+            },
+            legend: {
+                data: ['个数', '平均距离'],
+                inactiveColor: "red"
+            },
+            xAxis: [ //分类
+                {
+                    splitLine: {
+                        show: false
+                    }, //去除网格线
+                    type: 'category',
+                    data: ["公交站", "写字楼", "学校", "医院", "购物", "购物"],
+                    axisLabel: { //轴标记
+                        show: true,
+                        textStyle: {
+                            fontSize: 16
+                        },
+                    },
+                    axisTick: { // 竖向轴线标记 
+                        alignWithLabel: true, //把标记单柱居中
+                        show: true,
+                        length: 6,
+                        lineStyle: {
+                            color: 'black',
+                            type: 'solid',
+                            width: 1
+                        },
+                    },
+                }
+            ],
+            yAxis: [{
+                    type: 'value',
+                    name: '个数',
+                    nameTextStyle: {
+                        color: '#1e90ff',
+                    },
+                    axisLabel: { //轴标记
+                        show: true,
+                        formatter: '{value} 个', // y轴添加单位
+                        textStyle: {
+                            color: '#1e90ff',
+                        }
+                    }
+                },
+                {
+                    type: 'value',
+                    name: '平均距离',
+                    nameTextStyle: {
+                        color: '#A1455A',
+                    },
+                    min: 0,
+                    max: 1000,
+                    position: 'right',
+                    axisLabel: {
+                        formatter: '{value} m',
+                        textStyle: {
+                            color: "#A1455A"
+                        }
+                    }
+                }
+            ],
+            series: [ //数据
+                {
+                    "name": "个数",
+                    "type": "bar",
+                    "data": ["20", "50", "35", "19", "2", "0"],
+                    itemStyle: {
+                        normal: {
+                            color: "#5793F5" //柱体颜色
+                        }
+                    }
+                },
+                {
+                    name: '平均距离',
+                    type: 'line',
+                    itemStyle: { /*设置折线颜色*/
+                        normal: {
+                            color: '#A1455A'
+                        }
+                    },
+                    data: [30, 25, 30, 30, 50, 35]
+                }
+            ]
+        };
+        // 为echarts对象加载数据 
+        myChart.setOption(option);
+
+
+        //    2
+
+        var option2 = {
+            tooltip: {
+                trigger: 'item',
+                formatter: "{a} <br/>{b} : {c} ({d}%)"
+            },
+            legend: {
+                x: "left",
+                y: 20,
+                orient: 'vertical',
+                left: 'left',
+                data: ["公交站", "写字楼", "学校", "医院", "购物", "购物"],
+            },
+            series: [{
+                name: '访问来源',
+                type: 'pie',
+                radius: '55%',
+                center: ['50%', '60%'],
+                data: [{
+                        value: 20,
+                        name: '公交站'
+                    },
+                    {
+                        value: 50,
+                        name: '写字楼'
+                    },
+                    {
+                        value: 19,
+                        name: '学校'
+                    },
+                    {
+                        value: 2,
+                        name: '医院'
+                    },
+                    {
+                        value: 0,
+                        name: '购物'
+                    }
+                ],
+                itemStyle: {
+                    emphasis: {
+                        shadowBlur: 10,
+                        shadowOffsetX: 0,
+                        shadowColor: 'rgba(0, 0, 0, 0.5)'
+                    }
+                }
+            }]
+        };
+        myChart2.setOption(option2);
+
+
+        // 3
+
+
+        var option3 = {
+            legend: {
+                data: ['综合得分'],
+            },
+            radar: {
+                indicator: [{
+                        name: '生活',
+                        max: 6500
+                    },
+                    {
+                        name: '医疗',
+                        max: 30000
+                    },
+                    {
+                        name: '教育',
+                        max: 38000
+                    },
+                    {
+                        name: '工作',
+                        max: 52000
+                    },
+                    {
+                        name: '交通',
+                        max: 25000
+                    },
+                ]
+            },
+            series: [{
+                type: 'radar',
+                data: [{
+                    value: [4300, 10000, 28000, 35000, 20000, 19000, 19000, 19000, 19000, 19000],
+                    name: '综合得分'
+                }]
+            }]
+        };
+
+        myChart3.setOption(option3);
+    </script>
+</body>

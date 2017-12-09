@@ -1,0 +1,154 @@
+@import "personnal";
+@import "accountflow";
+@import "borrow";
+@import "borrow-apply";
+@baseColor:#2e8ece;
+@import "borrow_info";
+.el-headernav{
+    border-radius: 0;
+    margin-bottom: 0;
+        a{
+            color: white !important;
+        }
+        .navbar-right{
+            li{
+                
+               a{
+                    &:hover{
+                        color:@baseColor !important;
+
+                    }
+                }
+            }
+        }
+        .tooltip{
+            img{
+                width: 110px;
+                height: 110px;
+            }
+        }
+        
+}
+// 内容导航
+
+.el-navcon{
+    margin-bottom:10px; 
+   .nav{
+       li{
+           min-width: 100px;
+           text-align: center;
+           &:hover{
+               background-color: #ccc;
+               a{
+                   color:@baseColor;
+               }
+           }
+           a{
+               line-height: 42px;
+           }
+       }
+   }
+
+}
+// 主体内容
+// 理财产品
+.el-licai{
+    
+    
+      margin-top:20px;
+       dl{
+           padding-left: 80px !important;
+           height: 70px;
+           dt{
+            font-size: 20px;
+            font-weight: bold;
+           }
+           dd{
+               color: #737373;
+           }
+       }
+       .img-left{
+           background-image: url("../images/feature01.png");
+           background-position: 0px 0;
+           background-repeat:no-repeat;
+       }
+       .img-middle{
+            background-image: url("../images/feature02.png");
+           background-position: 0px 0;
+           background-repeat:no-repeat;
+       }
+       .img-right{
+           background-image: url("../images/feature03.png");
+           background-position: 0px 0;
+           background-repeat:no-repeat;
+       }
+    
+}
+.el-content{
+    border:0;
+    .panel-body{
+        padding: 0;
+        .pull-left{
+            font-size: 24px;
+            color: @baseColor;
+            font-weight: bold;
+            border-bottom: 4px solid @baseColor;
+        }
+        .pull-right{
+             color: @baseColor;
+        }
+    }
+}
+//理财产品
+.el-table{
+   thead{
+       color: #737373;
+   }
+   tr{
+        td:last-child{
+       text-align:right;
+   }
+   th:last-child{
+        text-align:right;
+   }
+   th{
+       padding-top: 30px !important;
+   }
+   }
+  
+   .el-color{
+       color: @baseColor;
+   }
+}
+//活动部分
+.el-sinaris{
+    .panel-body{
+        margin-top: 10px;
+    }
+    table{
+       tr{
+           td{
+               line-height: 30px;
+               cursor: pointer;
+           }
+           &:hover{
+                td{
+               color:@baseColor;
+           }
+           }
+       }
+    }
+}
+//页脚
+.el-footer{
+    background-color: #F8F8F8;
+    padding-top: 30px;
+    margin-top: 30px;
+    img{
+        width: 100%;
+    }
+    .el-last{
+        color: @baseColor;
+    }
+   
+}

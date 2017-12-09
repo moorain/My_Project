@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./lib/bootstrap/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="./dist/css/core.min.css"/>
+    <link rel="stylesheet" href="./font/iconfont.css">
+  <script src="http://echarts.baidu.com/build/dist/echarts-all.js"></script>
+    <title>首页</title>
+</head>
+<body>
+       <!-- 顶部导航 -->
+       <header class="el-topbar navbar navbar-inverse">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#topMenu" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">
+                    <span class="glyphicon glyphicon-phone-alt"> </span>
+                    <i>028-86261949</i>
+                </a>
+            </div>
+            <div class="collapse navbar-collapse" id="topMenu">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="#">首页</a>
+                    </li>
+                    <li>
+                        <a href="#">登陆</a>
+                    </li>
+                    <li>
+                        <a href="#">赶快充值</a>
+                    </li>
+                    <li>
+                        <a href="#">注销</a>
+                    </li>
+                    <li>
+                        <a href="#">帮助</a>
+                    </li>
+                    <li class="visible-lg iconfont">
+                        <a href="" id="contact" data-toggle="tooltip" data-placement="bottom" data-html="true" data-original-title="<img src='./dist/images/contract.png'>">
+                            <span class="icon-qq"></span>
+                            <span>联系客服</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        </header>
+    <!-- 内容导航 -->
+    <nav class="el-navbar navbar navbar-defalut">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">
+                    <img src="./dist/images/logo.png" alt=""> </a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li>
+                    <a href="#">&emsp;首页&emsp;</a>
+                </li>
+                <li>
+                    <a href="./invest.html">我要投资</a>
+                </li>
+                <li>
+                    <a href="#">我要借款</a>
+                </li>
+                <li>
+                    <a href="#">个人中心</a>
+                </li>
+                <li>
+                    <a href="#">新手指引</a>
+                </li>
+                <li>
+                    <a href="#">关于我们</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- 主题内容 -->
+    <section>
+      <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+          <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+          <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+        </ol>
+      
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner" role="listbox">
+          <div class="item active">
+            <img src="./dist/images/banner01.jpg" alt="...">
+          </div>
+          <div class="item">
+            <img src="./dist/images/banner02.jpg" alt="...">
+          </div>
+        </div>
+      
+        <!-- Controls -->
+        <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+          <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+          <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+    </section>
+    <!-- 理财产品 -->
+    <div class="container el-licai ">
+      <div calss="row">
+          <dl class="col-sm-4 img-left ">
+              <dt>投资理财</dt>
+              <dd>稳定投资、高收益、短期限，易融贷先行赔付，保障投资人权益。</dd>
+            </dl>
+            <dl class="col-sm-4 img-middle" >
+                <dt>投资理财</dt>
+                <dd>稳定投资、高收益、短期限，易融贷先行赔付，保障投资人权益。</dd>
+              </dl>
+              <dl class="col-sm-4 img-right">
+                  <dt>投资理财</dt>
+                  <dd>稳定投资、高收益、短期限，易融贷先行赔付，保障投资人权益。</dd>
+              </dl>
+      </div>
+    </div>
+    
+    <div class="container">
+    	
+    	 <div class="panel  el-content">
+		  <div class="panel-body">
+		   <span class="pull-left">进行中借款</span>
+		   	<span class="pull-right">进入投资列表</span>
+		  </div>
+		  
+		  	<table class="table table-hover el-table">
+		  		<thead ><tr style="padding-top: 100px;" >
+		  			<th>借款人</th>
+		  			<th>借款标题</th>
+		  			<th>年利率</th>
+		  			<th>金额	</th>
+		  			<th>还款方式</th>
+		  			<th>进度</th>
+		  			<th>操作</th>
+		  		</tr>
+		  		</thead>
+		  		<tbody><tr>
+		  			<td >张三</td>
+		  			<td>给我2000度过难关</td>
+		  			<td class="el-color">10.00%</td>
+		  			<td class="el-color">2,000.00</td>
+		  			<td>按月分期还款</td>
+		  			<td>78.00%</td>
+		  			<td><div class="btn btn-danger">查看</div></td>
+		  		</tr>
+		  		<tr>
+		  			<td>张三</td>
+		  			<td>给我2000度过难关</td>
+		  			<td class="el-color">10.00%</td>
+		  			<td class="el-color">2,000.00</td>
+		  			<td>按月分期还款</td>
+		  			<td>78.00%</td>
+		  			<td><div class="btn btn-danger">查看</div></td>
+		  		</tr>
+		  		
+		  		</tbody>
+		  	</table>
+		  
+	</div>
+    	
+    </div>	
+    </div>
+	  
+	  <!--活动部分-->
+	  <div class="container el-sinaris">
+	  	<div class="row">
+	  		<div class="col-sm-6">
+	  			    	 <div class="panel  el-content">
+		  <div class="panel-body">
+		   <span class="pull-left">企业最新资讯</span>
+		   	<span class="pull-right">进入投资列表</span>
+		  </div>
+		  
+		  	<table class="table el-table">
+		  		<tbody><tr> 
+		  			<td >央视力挺互联网金融</td>
+		  			<td>发表日期：2015-03-23</td>
+		  		</tr>
+		  		<tr>
+		  			<td>央视力挺互联网金融</td>
+		  			<td>发表日期：2015-03-23</td>
+		  		</tr>
+		  		<tr>
+		  			<td>央视力挺互联网金融</td>
+		  			<td>发表日期：2015-03-23</td>
+		  		</tr>
+		  		
+		  		</tbody>
+		  	</table>
+		  
+	</div>
+	  		</div>
+	  		
+	  				<div class="col-sm-6">
+	  			    	 <div class="panel  el-content">
+		  <div class="panel-body">
+		   <span class="pull-left">用户反馈</span>
+		   	<span class="pull-right">进入投资列表</span>
+		  </div>
+		  
+		  	<table class="table el-table">
+		  		<tbody><tr>
+		  			<td >央视力挺互联网金融</td>
+		  			<td>发表日期：2015-03-23</td>
+		  		</tr>
+		  		<tr>
+		  			<td>央视力挺互联网金融</td>
+		  			<td>发表日期：2015-03-23</td>
+		  		</tr>
+		  		<tr>
+		  			<td>央视力挺互联网金融</td>
+		  			<td>发表日期：2015-03-23</td>
+		  		</tr>
+		  		
+		  		</tbody>
+		  	</table>
+		  
+	</div>
+	  		</div>
+	  		
+	  				<div class="col-sm-6">
+	  			    	 <div class="panel  el-content">
+		  <div class="panel-body">
+		   <span class="pull-left">理财经验</span>
+		   	<span class="pull-right">进入投资列表</span>
+		  </div>
+		  
+		  	<table class="table el-table">
+		  		<tbody><tr>
+		  			<td >央视力挺互联网金融</td>
+		  			<td>发表日期：2015-03-23</td>
+		  		</tr>
+		  		<tr>
+		  			<td>央视力挺互联网金融</td>
+		  			<td>发表日期：2015-03-23</td>
+		  		</tr>
+		  		<tr>
+		  			<td>央视力挺互联网金融</td>
+		  			<td>发表日期：2015-03-23</td>
+		  		</tr>
+		  		
+		  		</tbody>
+		  	</table>
+		  
+	</div>
+	  		</div>
+	  		
+	  				<div class="col-sm-6">
+	  			    	 <div class="panel  el-content">
+		  <div class="panel-body">
+		   <span class="pull-left">活动分享</span>
+		   	<span class="pull-right">进入投资列表</span>
+		  </div>
+		  
+		  	<table class="table el-table">
+		  		<tbody><tr>
+		  			<td >央视力挺互联网金融</td>
+		  			<td>发表日期：2015-03-23</td>
+		  		</tr>
+		  		<tr>
+		  			<td>央视力挺互联网金融</td>
+		  			<td>发表日期：2015-03-23</td>
+		  		</tr>
+		  		<tr>
+		  			<td>央视力挺互联网金融</td>
+		  			<td>发表日期：2015-03-23</td>
+		  		</tr>
+		  		
+		  		</tbody>
+		  	</table>
+		  
+	</div>
+	  		</div>
+	  		
+	  	</div>
+	  </div>
+	  <!--地图-->
+	  <div class="container-fluid" id="el-map" style="height: 400px;;">
+	  	
+	  </div>
+  <!-- 脚部 -->
+  <div class="container-fluid el-footer" style="margin-top:0;">
+  	<div class="container">
+  	<div class="row">
+  		<div class="col-sm-8">
+  			<p>专业Java培训、PHP培训、UI培训、iOS培训、高级Web前端培训机构</p>
+
+			<p>版权所有： 2006-2015成都源代码教育咨询有限公司</p>
+
+			<p>地  址： 成都市高新区府城大道西段399号天府新谷1号楼620-625</p>
+
+			<p>电  话： 028-86261949  / 400-808-6840  邮箱： yuandaima@itsource.cn</p>
+
+			<p class="el-last">蜀ICP备14030149号-1  蜀公网安备510114990541</p>
+  		</div>
+  		<div class="col-sm-2">
+  			<p>官方微博</p>
+  			<img src="./dist/images/tecent.png">
+  			<img src="./dist/images/sina.png">	
+  		</div>
+  		<div class="col-sm-2">
+  			<p>官方微信</p>
+  			<img src="./dist/images/wx.jpg">
+  		</div>
+  	</div>
+  </div>
+  </div>
+    <script src="./lib/jquery/dist/jquery.min.js"></script>
+    <script src="./lib/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+     // 联系客服
+     $('#contact').tooltip();
+		
+			
+	  var myChart = echarts.init(document.getElementById('el-map')); 
+        
+ option = {
+    title : {
+        text: '客户全国分布',
+        subtext: '部分数据',
+        x:'center'
+    },
+    tooltip : {
+        trigger: 'item'
+    },
+    legend: {
+        orient: 'vertical',
+        x:'left',
+        data:['高利贷','放款','借贷']
+    },
+    dataRange: {
+        min: 0,
+        max: 2500,
+        x: 'left',
+        y: 'bottom',
+        text:['高','低'],           // 文本，默认为数值文本
+        calculable : true
+    },
+    toolbox: {
+        show: false,
+        orient : 'vertical',
+        x: 'right',
+        y: 'center',
+        feature : {
+            mark : {show: true},
+            dataView : {show: true, readOnly: false},
+            restore : {show: true},
+            saveAsImage : {show: true}
+        }
+    },
+    roamController: {
+        show: true,
+        x: 'right',
+        mapTypeControl: {
+            'china': true
+        }
+    },
+    series : [
+        {
+            name: '高利贷',
+            type: 'map',
+            mapType: 'china',
+            roam: false,
+            
+            itemStyle:{
+                normal:{label:{show:true}},
+                emphasis:{label:{show:true}}
+            },
+            data:[
+                {name: '北京',value: Math.round(Math.random()*1000)},
+                {name: '天津',value: Math.round(Math.random()*1000)},
+                {name: '上海',value: Math.round(Math.random()*1000)},
+                {name: '重庆',value: Math.round(Math.random()*1000)},
+                {name: '河北',value: Math.round(Math.random()*1000)},
+                {name: '河南',value: Math.round(Math.random()*1000)},
+                {name: '云南',value: Math.round(Math.random()*1000)},
+                {name: '辽宁',value: Math.round(Math.random()*1000)},
+                {name: '黑龙江',value: Math.round(Math.random()*1000)},
+                {name: '湖南',value: Math.round(Math.random()*1000)},
+                {name: '安徽',value: Math.round(Math.random()*1000)},
+                {name: '山东',value: Math.round(Math.random()*1000)},
+                {name: '新疆',value: Math.round(Math.random()*1000)},
+                {name: '江苏',value: Math.round(Math.random()*1000)},
+                {name: '浙江',value: Math.round(Math.random()*1000)},
+                {name: '江西',value: Math.round(Math.random()*1000)},
+                {name: '湖北',value: Math.round(Math.random()*1000)},
+                {name: '广西',value: Math.round(Math.random()*1000)},
+                {name: '甘肃',value: Math.round(Math.random()*1000)},
+                {name: '山西',value: Math.round(Math.random()*1000)},
+                {name: '内蒙古',value: Math.round(Math.random()*1000)},
+                {name: '陕西',value: Math.round(Math.random()*1000)},
+                {name: '吉林',value: Math.round(Math.random()*1000)},
+                {name: '福建',value: Math.round(Math.random()*1000)},
+                {name: '贵州',value: Math.round(Math.random()*1000)},
+                {name: '广东',value: Math.round(Math.random()*1000)},
+                {name: '青海',value: Math.round(Math.random()*1000)},
+                {name: '西藏',value: Math.round(Math.random()*1000)},
+                {name: '四川',value: Math.round(Math.random()*1000)},
+                {name: '宁夏',value: Math.round(Math.random()*1000)},
+                {name: '海南',value: Math.round(Math.random()*1000)},
+                {name: '台湾',value: Math.round(Math.random()*1000)},
+                {name: '香港',value: Math.round(Math.random()*1000)},
+                {name: '澳门',value: Math.round(Math.random()*1000)}
+            ]
+        },
+        {
+            name: '放款',
+            type: 'map',
+            mapType: 'china',
+            itemStyle:{
+                normal:{label:{show:true}},
+                emphasis:{label:{show:true}}
+            },
+            data:[
+                {name: '北京',value: Math.round(Math.random()*1000)},
+                {name: '天津',value: Math.round(Math.random()*1000)},
+                {name: '上海',value: Math.round(Math.random()*1000)},
+                {name: '重庆',value: Math.round(Math.random()*1000)},
+                {name: '河北',value: Math.round(Math.random()*1000)},
+                {name: '安徽',value: Math.round(Math.random()*1000)},
+                {name: '新疆',value: Math.round(Math.random()*1000)},
+                {name: '浙江',value: Math.round(Math.random()*1000)},
+                {name: '江西',value: Math.round(Math.random()*1000)},
+                {name: '山西',value: Math.round(Math.random()*1000)},
+                {name: '内蒙古',value: Math.round(Math.random()*1000)},
+                {name: '吉林',value: Math.round(Math.random()*1000)},
+                {name: '福建',value: Math.round(Math.random()*1000)},
+                {name: '广东',value: Math.round(Math.random()*1000)},
+                {name: '西藏',value: Math.round(Math.random()*1000)},
+                {name: '四川',value: Math.round(Math.random()*1000)},
+                {name: '宁夏',value: Math.round(Math.random()*1000)},
+                {name: '香港',value: Math.round(Math.random()*1000)},
+                {name: '澳门',value: Math.round(Math.random()*1000)}
+            ]
+        },
+        {
+            name: '借贷',
+            type: 'map',
+            mapType: 'china',
+            itemStyle:{
+                normal:{label:{show:true}},
+                emphasis:{label:{show:true}}
+            },
+            data:[
+                {name: '北京',value: Math.round(Math.random()*1000)},
+                {name: '天津',value: Math.round(Math.random()*1000)},
+                {name: '上海',value: Math.round(Math.random()*1000)},
+                {name: '广东',value: Math.round(Math.random()*1000)},
+                {name: '台湾',value: Math.round(Math.random()*1000)},
+                {name: '香港',value: Math.round(Math.random()*1000)},
+                {name: '澳门',value: Math.round(Math.random()*1000)}
+            ]
+        }
+    ]
+};
+                    
+        // 为echarts对象加载数据 
+        myChart.setOption(option); 
+    </script>
+</body>
+
+</html>

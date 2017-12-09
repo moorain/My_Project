@@ -1,0 +1,138 @@
+.el-posonnal-content{
+
+    .col-sm-3{
+        ul{
+            li{
+                padding: 0;
+                line-height: 40px;
+                background-color: #F5F5F5;
+                a{
+                    width: 100%;
+                    display: block;
+                    font-size: 14px;
+                    padding-left: 20px;
+                    text-decoration: none;
+                }
+                ul{
+                    margin: 0 ;
+                    padding: 0;
+                    list-style: none;
+                    li{
+                       background-color: #FFFFFF; 
+                       a{
+                           line-height: 40px;
+                           display: block;
+                           padding-left: 40px;
+                       }
+                    }
+                }
+            }
+        }
+    }
+    
+    .col-sm-9{
+      
+        .panel-heading{
+            padding-left: 0px;
+            img{
+                width: 80px;
+                &{
+                    margin-right: 10px;
+                    border: 1px solid #ddd;
+                    padding: 10px;
+                  
+                }
+            }
+        }
+     .panel-top{
+        border-top: 0 !important;
+        border-radius: 0 ;
+    } 
+       
+    }
+    .el-money{
+        border-top: 1px solid #DDDDDD;
+        padding-top: 10px;
+        font-size: 18px;
+        .col-sm-4{
+            span{
+                color: @baseColor;
+            }
+        }
+    }
+    .el-btn{
+        padding-top: 30px;
+        padding-bottom: 20px;
+    }
+    .el-phone{
+        border-bottom:1px solid #DDDDDD ;
+        margin-top: 30px;
+        .col-sm-4{
+            padding-top: 20px;
+        }
+            }
+}
+#el-main {
+           width: 600px;
+           height: 100%;
+       }
+        
+/*左侧滑动栏*/
+@media screen and (max-width:768px){ 
+    .el-posonnal-content{
+        overflow: hidden;
+    }
+    .offcanvas-title{
+      
+        min-height: 550px;
+    }
+    .offcanvas{
+        position: relative;
+        transition: all  1s;
+       
+    }
+    .el-offcanvas-left{
+        position: absolute;
+        left: -50%;
+       width:50%;
+      
+    }
+    .offcanvas-right{
+        position: relative;
+        
+      
+    }
+    .offcanvas-btn{
+        position: absolute;
+        padding: 10px 1px;
+        z-index:100 ;
+        i{
+            font-size:30px;
+        }
+         top: 50%-20px;
+         left: -5px;
+    }
+    .active1{
+        
+        transform: translateX(50%);
+        -webkit-transform:translateX(50%); 
+        -moz-transform:translateX(50%) ;
+        -ms-transform:translateX(50%); 
+    }
+    
+    .el-borrow-one {
+         min-height: 650px;
+        .form-group {
+            margin: 36px 0 !important;
+            }
+            .el-dialog{
+                display: none;
+            }
+            .btn {
+             left: 104px !important;
+                top: 46px !important;
+            }
+    }
+    
+}
+ 

@@ -1,0 +1,104 @@
+
+/* 个人中心 */
+.el-personal-main {
+  // 左侧导航栏
+  .el-personal-left {
+    .list-group {
+      li {
+        background-color: #f1f1f1;
+        padding: 0;
+        a {
+          padding: 10px;
+          display: block;
+        }
+        ul {
+          list-style: none;
+          padding: 0;
+          li {
+            background-color: #fff;
+            padding-left: 30px;
+          }
+          .active {
+            background-color: #337ab7;
+            a {
+              color: #fff;
+            }
+          }
+        }
+      }
+    }
+  }
+  // 右侧
+  .el-personal-right {
+      padding-top: 10px;
+    // border: 1px solid #eee;
+    border-radius: 6px;
+    .el-personal-header {
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 10px;
+      .el-personal-headerimg {
+        margin-right: 20px;
+        border: 1px solid #ccc;
+        img {
+          width: 80px;
+          padding: 8px; 
+        }
+      }
+    }
+    .tab-content{
+        .tab-pane{
+            border: 1px solid #eee;
+            border-top: 0;
+            .panel{
+                  -webkit-box-shadow: 0 0 0 ; 
+                    box-shadow: 0 0 0 ; 
+            }
+        }
+    }
+  }
+  .el-personal-money {
+    margin-top: 10px;
+    font-size: 20px;
+    padding-left: 20px;
+    margin-bottom: 20px;
+  }
+  .el-personal-info {
+    margin-top: 40px;
+    .col-md-4 {
+      padding-bottom: 10px;
+      .pull-left {
+        dl {
+          padding-left: 10px;
+          dt {
+            padding-bottom: 8px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .offcanvas {
+    position: relative;
+    left: 0;
+    transition: all 0.6s;
+  }
+  // 右侧列表组
+  .offcanvas-left {
+    position: absolute;
+    left: -50%;
+    width: 50%;
+  }
+  // 按钮
+  .offcanvas-btn {
+    padding: 20px 5px;
+    position: absolute;
+    left: 0;
+    top: 50%-20px;
+    z-index: 999;
+  }
+  .activeside {
+    left: 50%;
+  }
+}

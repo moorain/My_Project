@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- 定义视口 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>账户充值</title>
+    <!-- 引入样式资源文件 -->
+    <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="dist/css/core.min.css">
+    <!-- 引入日历插件css -->
+    <link rel="stylesheet" href="./dist/css/bootstrap-datetimepicker.min.css">
+</head>
+
+<body>
+    <!-- 顶部导航 -->
+    <header class="el-topbar navbar navbar-inverse">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#topMenu" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">
+                    <span class="glyphicon glyphicon-phone-alt"> </span>
+                    <i>028-86261949</i>
+                </a>
+            </div>
+            <div class="collapse navbar-collapse" id="topMenu">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="index.html">首页</a>
+                    </li>
+                    <li>
+                        <a href="login.html">登陆</a>
+                    </li>
+                    <li>
+                        <a href="recharge.html">赶快充值</a>
+                    </li>
+                    <li>
+                        <a href="#">注销</a>
+                    </li>
+                    <li>
+                        <a href="#">帮助</a>
+                    </li>
+                    <li class="visible-lg iconfont">
+                        <a href="" id="contact" data-toggle="tooltip" data-placement="bottom" data-html="true" data-original-title="<img src='./dist/images/contract.png'>">
+                            <span class="icon-qq"></span>
+                            <span>联系客服</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <!-- 内容导航 -->
+    <nav class="el-navbar navbar navbar-defalut">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">
+                    <img src="./dist/images/logo.png" alt=""> </a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li>
+                    <a href="./index.html">&emsp;首页&emsp;</a>
+                </li>
+                <li>
+                    <a href="./invest.html">我要投资</a>
+                </li>
+                <li>
+                    <a href="./borrow.html">我要借款</a>
+                </li>
+                <li>
+                    <a href="./personal.html">个人中心</a>
+                </li>
+                <li>
+                    <a href="#">新手指引</a>
+                </li>
+                <li>
+                    <a href="#">关于我们</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- 内容区 -->
+    <div class="el-recharge-main container">
+        <!-- 说明文字 -->
+        <div class="el-recharge-title">
+            <h3>账户充值</h3>
+            <p>1. 由于银行系统的限制，充值功能建议使用 IE 内核（IE8及以上）的浏览器。</p>
+            <p>2. 请注意：为打击信用卡套现行为，充值资金必须经过投资回款后方能允许提现。</p>
+        </div>
+        <!-- 充值方式 -->
+        <div class="el-recharge-method">
+            <ul id="myTab" class="nav nav-tabs">
+                <li class="active">
+                    <a href="#home" data-toggle="tab">线上充值(第三方平台)</a>
+                </li>
+                <li>
+                    <a href="#ios" data-toggle="tab">线下充值</a>
+                </li>
+            </ul>
+
+            <div id="myTabContent" class="tab-content">
+                <div class="method-list tab-pane fade in active" id="home">
+                    <p class="h3 text-center text-danger">系统暂不支持，请采用线下充值</p>
+                </div>
+                <div class="method-list tab-pane fade " id="ios">
+                    <!-- 银行列表 -->
+                    <div class="el-recharge-method-list">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>银行名称</th>
+                                    <th>开户人姓名</th>
+                                    <th>银行帐号</th>
+                                    <th>开户行支行名称</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <span class="el-recharge-bankimg bankimg01"></span>
+                                    </td>
+                                    <td>源代码</td>
+                                    <td>62170038233428412750</td>
+                                    <td>府城大道支行</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span class="el-recharge-bankimg bankimg02"></span>
+                                    </td>
+                                    <td>源代码</td>
+                                    <td>62170038233428412750</td>
+                                    <td>府城大道支行</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span class="el-recharge-bankimg bankimg03"></span>
+                                    </td>
+                                    <td>源代码</td>
+                                    <td>62170038233428412750</td>
+                                    <td>府城大道支行</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- 充值步骤 -->
+                    <div class="el-recharge-method-step text-primary">
+                        <h4>第一步:</h4>
+                        <p>请选择往以上一个账号汇款或转账您所要充值的金额（若您是跨行转账，推荐选择建行）。注：请保存您的交易记录信息。</p>
+                        <h4>第二步:</h4>
+                        <p>款或转账成功后，再选择你所汇款或转账的账号，并填写以下完整的信息后，提交您的线下充值申请。我们将会在下个工作日核对您的申请。</p>
+                    </div>
+                    <!-- 充值表单 -->
+                    <div class="el-recharge-method-form">
+                        <form class="form-horizontal" id="rechargeform">
+                            <div class="form-group">
+                                <label for="inputEmail3" class="col-sm-2 control-label">银行</label>
+                                <div class="col-sm-6">
+                                    <select class="form-control">
+                                        <option value="1">工商银行62170038233428412750(府城大道支行)</option>
+                                        <option value="2">农业银行6217003834411112750(成都天府新谷支行)</option>
+                                        <option value="3">招商银行6212303810028412750(成都高新天府大道支行)</option>
+                                    </select>
+                                </div>
+                            </div>
+
+     <!--                        <div class="input-append date form_datetime">
+                                <input size="16" type="text" value="" readonly>
+                                <span class="add-on"><i class="icon-th"></i></span>
+                            </div> -->
+
+                            <div class="form-group">
+                                <label for="chargrnum" class="col-sm-2 control-label">交易号</label>
+                                <div class="col-sm-4">
+                                    <input type="text" name="chargrnum" class="form-control" id="chargrnum">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="rechargetime" class="col-sm-2 control-label">充值时间</label>
+                                <div id="caldarbox" class="col-sm-4 input-append date form_datetime">
+                                    <input type="text" name="rechargetime" class="form-control" id="rechargetime">
+                                    <span id="caldar" class="add-on"><i class="icon-th"></i></span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="rechargesum" class="col-sm-2 control-label">充值金额</label>
+                                <div class="col-sm-4">
+                                    <input type="number" name="rechargesum" class="form-control" id="rechargesum">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="rechargeexplain" class="col-sm-2 control-label">说明</label>
+                                <div class="col-sm-6">
+                                    <textarea class="form-control" rows="3"></textarea>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-offset-2 col-sm-10">
+                                    <button class="btn btn-primary">确认提交</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 尾部 -->
+    <footer class="el-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    <p>专业Java培训、PHP培训、UI培训、iOS培训、高级Web前端培训机构</p>
+                    <p> 版权所有： 2006-2015成都源代码教育咨询有限公司</p>
+                    <p> 地  址： 成都市高新区府城大道西段399号天府新谷1号楼620-625</p>
+                    <p> 电  话： 028-86261949 / 400-808-6840  邮箱： yuandaima@itsource.cn</p>
+                    <p>
+                        <a href="###">蜀ICP备14030149号-1</a>&emsp;&emsp;
+                        <a href="###">蜀公网安备510114990541</a>
+                    </p>
+                </div>
+                <div class="col-md-2">
+                    <p>官方微博:</p>
+                    <img src="./dist/images/tecent.png" alt="">
+                    <img src="./dist/images/sina.png" alt="">
+                </div>
+                <div class="col-md-2">
+                    <p>官方微信:</p>
+                    <img src="./dist/images/wx.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+<!--js需要延迟加载-->
+<!--3. 引入jquery-->
+<script src="lib/jquery/dist/jquery.min.js"></script>
+
+<!--3. 引入boostrap脚本资源文件-->
+<script src="lib/bootstrap/dist/js/bootstrap.min.js"></script>
+<!-- 日历 -->
+<script src="./dist/js/bootstrap-datetimepicker.min.js"></script>
+
+<!-- 表单验证插件 -->
+<script src="./lib/bootstrapvalidator/dist/js/bootstrapValidator.min.js"></script>
+<link rel="stylesheet" href="./lib/bootstrapvalidator/dist/css/bootstrapValidator.min.css">
+<script>
+    $(function () {
+        $('#rechargeform').bootstrapValidator({　　　　　
+            message: 'This value is not valid',
+            　feedbackIcons: {　　　　　　　　
+                valid: 'glyphicon glyphicon-ok',
+                　　　　　　　　invalid: 'glyphicon glyphicon-remove',
+                　　　　　　　　validating: 'glyphicon glyphicon-refresh'　　　　　　　　
+            },
+            fields: {
+                chargrnum: {
+                    validators: {
+                        notEmpty: {
+                            message: '交易号不能为空'
+                        },
+                        stringLength: {
+                            min: 10,
+                            max: 10,
+                            message: '交易号必须为10位'
+                        },
+                    }
+                },
+                rechargetime: {
+                    validators: {
+                        notEmpty: {
+                            message: '充值时间不能为空。'
+                        },
+                    }
+                },
+                rechargesum: {
+                    validators: {
+                        notEmpty: {
+                            message: '确认密码不能为空。'
+                        },
+                    }
+                },
+            },
+        }).on("success.form.bv", function () {
+            //    $.post("./server/data.json",$('#registerform').serialize(),function(data){})
+        })
+    })
+</script>
+<script type="text/javascript">
+    $.fn.datetimepicker.dates['zh'] = {  
+        days:       ["星期日", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六","星期日"],  
+        daysShort:  ["日", "一", "二", "三", "四", "五", "六","日"],  
+        daysMin:    ["日", "一", "二", "三", "四", "五", "六","日"],  
+        months:     ["一月", "二月", "三月", "四月", "五月", "六月", "七月", "八月", "九月", "十月", "十一月","十二月"],  
+        monthsShort:  ["一", "二", "三", "四", "五", "六", "七", "八", "九", "十", "十一", "十二"],  
+        meridiem:    ["上午", "下午"],  
+        //suffix:      ["st", "nd", "rd", "th"],  
+        today:       "今天"  
+    }; 
+    $(".form_datetime").datetimepicker({
+        language:  'zh',  
+        format: "yyyy MM dd   - hh:ii",
+        autoclose: true,
+        todayBtn: true,
+        pickerPosition: "bottom-left"
+    });
+    
+</script>
+</html>

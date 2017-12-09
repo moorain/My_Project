@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./lib/bootstrap/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="./dist/css/core.min.css"/>
+    <link rel="stylesheet" href="./fonts/font-awesome/css/font-awesome.min.css"/>
+ <script src="http://echarts.baidu.com/build/dist/echarts-all.js"></script>
+    <title>个人中心</title>
+</head>
+<body>
+    <!-- 头部导航 -->
+    <header class="navbar navbar-default el-headernav navbar-inverse">
+            <div class="container">
+              <!-- Brand and toggle get grouped for better mobile display -->
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+              </div>
+          
+              <!-- Collect the nav links, forms, and other content for toggling -->
+              <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                  <li><a href="#">首页</a></li>
+                  <li><a href="#">登录</a></li>
+                  <li><a href="#">注册</a></li>
+                  <li><a href="#">帮助</a></li>
+                  <li class="el-tooltip" data-toggle="tooltip" data-placement="bottom" title="<img src='./dist/images/contract.png'/>" data-html="true"><a href="#">联系客服</a></li>
+                </ul>
+              </div><!-- /.navbar-collapse -->
+            </div><!-- /.container-fluid -->
+    </header>
+    <!-- 内容导航 -->
+    <nav class="navbar navbar-default el-navcon">
+      <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#"><img src="./dist/images/logo.png"/></a>
+        </div>
+    
+        <!-- Collect the nav links, forms, and other cteontent for toggling -->
+          <ul class="nav navbar-nav ">
+            <li><a href="#">首页</a></li>
+            <li><a href="#">我要投资</a></li>
+            <li><a href="#">我要借款</a></li>
+            <li><a href="#">个人中心</a></li>
+            <li><a href="#">新手指引</a></li>
+            <li><a href="#">关于我们</a></li>
+          </ul>
+      </div><!-- /.container-fluid -->
+    </nav>
+
+    <!-- 主题内容 -->
+	<div class="el-posonnal-content el-posonnal-contentm container offcanvas-title ">
+		<div class="row offcanvas ">
+			<!--左侧列表组-->
+			<div class="col-sm-3 el-offcanvas-left">
+				<ul class="list-group">
+				  <li class="list-group-item">
+				  	<a href="###">投资项目</a>
+				  	
+				  </li>
+				  <li class="list-group-item"><a href="###">借款项目</a>
+					<ul>
+				  		<li><a href="###">借款项目</a></li>
+				  		<li><a href="###">借款明细</a></li>
+				  	</ul>
+				  	
+				  </li>
+				  <li class="list-group-item">
+				  	<a href="###">我的账户</a>
+				  	<ul>
+				  		<li><a href="###">账户信息</a></li>
+				  		<li><a href="###">实名认证</a></li>
+				  		<li><a href="###">银行卡管理</a></li>
+				  		<li><a href="###">登录记录</a></li>
+				  	</ul>
+				  </li>
+				  <li class="list-group-item">
+				  	<a href="###">资产详情</a>
+				  		<ul>
+				  		<li><a href="###">账户流水</a></li>
+				  		<li><a href="###">充值明细</a></li>
+				  		<li><a href="###">提现记录</a></li>
+				  		<li><a href="###">收款明细</a></li>
+				  	</ul>
+				  </li>
+				  <li class="list-group-item"><a href="###">个人资料</a></li>
+				</ul>
+			</div>
+			<!--右边盒子-->
+			<div class="col-sm-9 offcanvas-right">
+				<button class="btn-primary btn btn-sm visible-xs offcanvas-btn"><i class="fa fa-angle-double-right"></i></button>
+
+<ul class="nav nav-tabs" role="tablist">
+    <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">个人信息</a></li>
+    <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">收入来源</a></li>
+  </ul>
+
+  <!--tab切换 -->
+  <div class="tab-content">
+    <div role="tabpanel" class="tab-pane active" id="home">
+    	
+    				
+				<div class="panel panel-default panel-top">
+				  <div class="panel-body">
+				   	<div class="panel-heading clearfix">
+				   		<div class="pull-left"><img src="dist/images/head_icon.jpg"/></div>
+				   		<div class="pull-left"> 
+				   			<p>昵 称：源代码教育</p>
+							<p>用户名：小强</p>
+							<p>最后登录时间：2016-10-25 15:30:10</p>
+				   		</div>
+				   	</div>
+				   	<!--金额-->
+				 	<div class="el-money">
+				 		<div class="row">
+				 			<div class="col-sm-4">总金额：<span>10000元</span></div>
+				 			<div class="col-sm-4">可用金额：<span>8000元</span></div>
+				 			<div class="col-sm-4">冻结金额：<span>2000元</span></div>
+				 		</div>
+				 	</div>
+				   	
+				   	<!--充值及提现按钮-->
+				   	<div class="el-btn text-center">
+				   		<button type="button" class="btn btn-danger btn-lg">账户充值</button>
+				   		<button type="button" class="btn btn-primary btn-lg">账户提现</button>
+				   	</div>
+				   	
+				   	<!--认证及会员模块-->
+				   	<div class="el-phone">
+				   		<div class="row">
+				   			<div class="col-sm-4">
+				   				<div class="pull-left"><img  src="dist/images/shiming.png"/></div>
+				   				<div class="pull-left">
+				   					<dl>
+				   						<dt>实名认证</dt>
+				   						<dd>未认证 <a href="###">马上认证</a></dd>
+				   					</dl>
+				   				</div>
+				   				<div class="clearfix"></div>
+				   				<p>实名认证之后才能在平台投资</p>
+				   			</div>
+				   			<div class="col-sm-4">
+				   				
+				   				<div class="pull-left"><img  src="dist/images/shouji.jpg"/></div>
+				   				<div class="pull-left">
+				   					<dl>
+				   						<dt>实名认证</dt>
+				   						<dd>未认证 <a href="###">马上认证</a></dd>
+				   					</dl>
+				   				</div>
+				   				<div class="clearfix"></div>
+				   				<p>可以收到系统操作信息,增加使用安全性</p>
+				   				
+				   			</div>
+				   			<div class="col-sm-4">
+				   				<div class="pull-left"><img  src="dist/images/youxiang.jpg"/></div>
+				   				<div class="pull-left">
+				   					<dl>
+				   						<dt>实名认证</dt>
+				   						<dd>未认证 <a href="###">马上认证</a></dd>
+				   					</dl>
+				   				</div>
+				   				<div class="clearfix"></div>
+				   				<p>您可以设置邮箱来接收重要信息</p>
+				   				
+				   			</div>
+				   			<div class="col-sm-4">
+				   				<div class="pull-left"><img  src="dist/images/baozhan.jpg"/></div>
+				   				<div class="pull-left">
+				   					<dl>
+				   						<dt>实名认证</dt>
+				   						<dd>未认证 <a href="###">马上认证</a></dd>
+				   					</dl>
+				   				</div>
+				   				<div class="clearfix"></div>
+				   				<p>VIP会员，让你更快捷的投资</p>
+				   				
+				   			</div>
+				   		</div>
+				   	</div>
+				  </div>
+				</div>
+				
+    	
+    	
+    </div>
+    <div role="tabpanel" class="tab-pane row" id="profile" style="height: 500px; width: 800px;">
+    	
+    	
+    	
+    </div>
+  </div>
+
+</div>
+
+
+
+				
+	
+			</div>
+		</div>
+	</div>
+  <!-- 脚部 -->
+  <div class="container-fluid el-footer">
+  	<div class="container">
+  	<div class="row">
+  		<div class="col-sm-8">
+  			<p>专业Java培训、PHP培训、UI培训、iOS培训、高级Web前端培训机构</p>
+
+			<p>版权所有： 2006-2015成都源代码教育咨询有限公司</p>
+
+			<p>地  址： 成都市高新区府城大道西段399号天府新谷1号楼620-625</p>
+
+			<p>电  话： 028-86261949  / 400-808-6840  邮箱： yuandaima@itsource.cn</p>
+
+			<p class="el-last">蜀ICP备14030149号-1  蜀公网安备510114990541</p>
+  		</div>
+  		<div class="col-sm-2">
+  			<p>官方微博</p>
+  			<img src="./dist/images/tecent.png">
+  			<img src="./dist/images/sina.png">	
+  		</div>
+  		<div class="col-sm-2">
+  			<p>官方微信</p>
+  			<img src="./dist/images/wx.jpg">
+  		</div>
+  	</div>
+  </div>
+  </div>
+    <script src="./lib/jquery/dist/jquery.min.js"></script>
+    <script src="./lib/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="dist/js/core.min.js"></script>
+  <script type="text/javascript">
+	   var myChart = echarts.init(document.getElementById('profile')); 
+	   
+	   
+	   option = {
+    title : {
+        text: '主要收入来源',
+        subtext: '',
+        x:'center'
+    },
+    tooltip : {
+        trigger: 'item',
+        formatter: "{a} <br/>{b} : {c} ({d}%)"
+    },
+    legend: {
+        orient : 'vertical',
+        x : 'left',
+        data:['银行利息','金融借贷','高利贷','上班','兼职']
+    },
+    toolbox: {
+        show : false,
+        feature : {
+            mark : {show: true},
+            dataView : {show: true, readOnly: false},
+            magicType : {
+                show: true, 
+                type: ['pie', 'funnel'],
+                option: {
+                    funnel: {
+                        x: '25%',
+                        width: '50%',
+                        funnelAlign: 'left',
+                        max: 1548
+                    }
+                }
+            },
+            restore : {show: true},
+            saveAsImage : {show: true}
+        }
+    },
+    calculable : true,
+    series : [
+        {
+            name:'访问来源',
+            type:'pie',
+            radius : '55%',
+            center: ['50%', '60%'],
+            data:[
+                {value:335, name:'银行利息'},
+                {value:310, name:'金融借贷'},
+                {value:234, name:'高利贷'},
+                {value:135, name:'上班'},
+                {value:1548, name:'兼职'}
+            ]
+        }
+    ]
+};
+                    
+        // 为echarts对象加载数据 
+        myChart.setOption(option); 
+	   
+	   $(function(){
+	   		$("")
+	   })
+</script>
+</body>
+
+</html>

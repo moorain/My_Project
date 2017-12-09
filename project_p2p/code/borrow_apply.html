@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./lib/bootstrap/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="./dist/css/core.min.css"/>
+	<link rel="stylesheet" href="./fonts/font-awesome/css/font-awesome.min.css"/>
+	 <link rel="stylesheet" href="./font/iconfont.css">
+    <title>蓝源-------</title>
+</head>
+<body>
+  <!-- 顶部导航 -->
+    <header class="el-topbar navbar navbar-inverse">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#topMenu" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">
+                    <span class="glyphicon glyphicon-phone-alt"> </span>
+                    <i>028-86261949</i>
+                </a>
+            </div>
+            <div class="collapse navbar-collapse" id="topMenu">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="./index.html">首页</a>
+                    </li>
+                    <li>
+                        <a href="./login.html">登陆</a>
+                    </li>
+                    <li>
+                        <a href="">赶快充值</a>
+                    </li>
+                    <li>
+                        <a href="#">注销</a>
+                    </li>
+                    <li>
+                        <a href="#">帮助</a>
+                    </li>
+                    <li class="visible-lg iconfont">
+                        <a href="" id="contact" data-toggle="tooltip" data-placement="bottom" data-html="true" data-original-title="<img src='./dist/images/contract.png'>">
+                            <span class="icon-qq"></span>
+                            <span>联系客服</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <!-- 内容导航 -->
+    <nav class="el-navbar navbar navbar-defalut">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">
+                    <img src="./dist/images/logo.png" alt=""> </a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li>
+                    <a href="./index.html">&emsp;首页&emsp;</a>
+                </li>
+                <li>
+                    <a href="./invest.html">我要投资</a>
+                </li>
+                <li>
+                    <a href="./borrow.html">我要借款</a>
+                </li>
+                <li>
+                    <a href="./personal.html">个人中心</a>
+                </li>
+                <li>
+                    <a href="#">新手指引</a>
+                </li>
+                <li>
+                    <a href="#">关于我们</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <!-- 主题内容 -->
+	<div class="el-posonnal-content container offcanvas-title">
+		<div class="row offcanvas">
+			<!--左侧列表组-->
+			<div class="col-sm-3 el-offcanvas-left">
+				<ul class="list-group">
+				  <li class="list-group-item">
+				  	<a href="###">投资项目</a>
+				  	
+				  </li>
+				 <li class="list-group-item"><a href="###">借款项目</a>
+					<ul>
+				  		<li><a href="./bid_request_list.html">借款项目</a></li>
+				  		<li><a href="./borrowBidReturn_list.html">借款明细</a></li>
+				  	</ul>
+				  	
+				  </li>
+				  <li class="list-group-item">
+				  	<a href="###">我的账户</a>
+				  	<ul>
+				  		<li><a href="./personal.html">账户信息</a></li>
+				  		<li><a href="./realAuth.html">实名认证</a></li>
+				  		<li><a href="###">银行卡管理</a></li>
+				  		<li><a href="###">登录记录</a></li>
+				  	</ul>
+				  </li>
+				  <li class="list-group-item">
+				  	<a href="###">资产详情</a>
+				  		<ul>
+				  		<li><a href="./accountFlow_list.html">账户流水</a></li>
+				  		<li><a href="./recharge_list.html">充值明细</a></li>
+				  		<li><a href="###">提现记录</a></li>
+				  		<li><a href="###">收款明细</a></li>
+				  	</ul>
+				  </li>
+				  <li class="list-group-item"><a href="./userInfo.html">个人资料</a></li>
+				</ul>
+			</div>
+			<!--右边盒子-->
+		<div class=" col-sm-9 offcanvas-right">
+				<button class="btn-primary btn btn-sm visible-xs offcanvas-btn"><i class="fa fa-angle-double-right"></i></button>
+			<div class="el-head">
+				<strong>信用借款</strong>
+				<p><span class="text-info">授信额度：<span><span class="text-danger">2000</span>     可借金额：<span class="text-danger">2000</span></p>
+			</div>
+			<div class="panel el-body2">
+			  <div class="panel-body">
+			  	<span> 借款信息</span><span class="label label-primary">信用标</span>
+			  </div>
+			</div>
+			
+			<!--表单-->
+				<form class="form-horizontal el-borrow-one">
+				  <div class="form-group">
+				    <label for="inputEmail3" class="col-sm-2 control-label">借款金额</label>
+				    <div class="col-sm-3">
+				    			 <input type="email" class="form-control" name="jine" id="borrow-money" />
+				    		<span class="el-span">元</span>
+				     
+				    </div>
+				  </div>
+				  <div class="form-group">
+				    <label for="inputPassword3" class="col-sm-2 control-label">借款利息</label>
+				    <div class="col-sm-3">
+				    			 <input type="email" class="form-control" id="borrow-last" />
+				    		<span class="el-span">%</span>
+				     
+				    </div>
+				  </div>
+				  <div class="form-group">
+				    <label for="inputPassword3" class="col-sm-2 control-label">借款期限</label>
+				    <div class="col-sm-3">
+				      <select class="form-control  selectpicker-dropup">
+						  <option>1</option>
+						  <option>2</option>
+						  <option>3</option>
+						  <option>4</option>
+						  <option>5</option>
+						  <option>6</option>
+						  <option>7</option>
+						  <option>8</option>
+						  <option>9</option>
+						  <option>10</option>
+						   <option>11</option>
+						  <option>12</option>
+						</select>
+						<span class="el-span">月</span>
+				    </div>
+				  </div>
+				  
+				  <!--单选-->
+				  <div class="form-group">
+				  	<div class="el-dialog">
+				  		
+				  		<p>相关费用</p>
+
+						<p>利息 --</p>
+						
+						<p>奖金 --<p>
+						
+						<p>管理费 -</p>
+				  	</div>
+				    <label for="inputEmail3" class="col-sm-2 control-label">还款方式</label>
+				    <div class="col-sm-4">
+				    			 <label class="radio-inline">
+							  <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 按月到期
+							</label>
+							<label class="radio-inline">
+							  <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 按月分期
+							</label>
+				     
+				    </div>
+				  </div>
+				  
+				  
+				   <div class="form-group">
+				    <label for="inputEmail3" class="col-sm-2 control-label">最小投标</label>
+				    <div class="col-sm-3">
+				    			 <input type="email" class="form-control" id="inputEmail3" />
+				    		<span class="el-span">元</span>
+				     
+				    </div>
+				  </div>
+				   <div class="form-group">
+				    <label for="inputEmail3" class="col-sm-2 control-label">投标奖金</label>
+				    <div class="col-sm-3">
+				    			 <input type="email" class="form-control" id="inputEmail3" />
+				    		<span class="el-span">%</span>
+				     
+				    </div>
+				  </div>
+				  
+				   <div class="form-group">
+				    <label for="inputPassword3" class="col-sm-2 control-label">招标天数</label>
+				    <div class="col-sm-3">
+				      <select class="form-control  selectpicker-dropup">
+						  <option>1</option>
+						  <option>2</option>
+						  <option>3</option>
+						  <option>4</option>
+						  <option>5</option>
+						  <option>6</option>
+						  <option>7</option>
+						  <option>8</option>
+						  <option>9</option>
+						  <option>10</option>
+						   <option>11</option>
+						  <option>12</option>
+						</select>
+						<span class="el-span">月</span>
+				    </div>
+				  </div>
+				  
+				  <!--输入框-->
+				   <div class="form-group">
+				    <label for="inputEmail3" class="col-sm-2 control-label">借款标题</label>
+				    <div class="col-sm-8">
+				    			 <input type="text" class="form-control text-bi" id="" />		     
+				    </div>
+				  </div>
+				  <!--文本域-->
+				  <div class="form-group">
+				    <label for="inputEmail3" class="col-sm-2 control-label">借款描述</label>
+				    <div class="col-sm-8">
+				    			<textarea class="form-control el-textarea" rows="3"></textarea>	     
+				    </div>
+				  </div>
+				  <div class="col-sm-8  form-group"><button type="button" class="btn btn-secces btn-primary">提交申请</button></div>
+				</form>
+		</div>
+		</div>
+	</div>
+  <!-- 脚部 -->
+  <div class="container-fluid el-footer el-borow-footer">
+  	<div class="container">
+  	<div class="row">
+  		<div class="col-sm-8">
+  			<p>专业Java培训、PHP培训、UI培训、iOS培训、高级Web前端培训机构</p>
+
+			<p>版权所有： 2006-2015成都源代码教育咨询有限公司</p>
+
+			<p>地  址： 成都市高新区府城大道西段399号天府新谷1号楼620-625</p>
+
+			<p>电  话： 028-86261949  / 400-808-6840  邮箱： yuandaima@itsource.cn</p>
+
+			<p class="el-last">蜀ICP备14030149号-1  蜀公网安备510114990541</p>
+  		</div>
+  		<div class="col-sm-2">
+  			<p>官方微博</p>
+  			<img src="./dist/images/tecent.png">
+  			<img src="./dist/images/sina.png">	
+  		</div>
+  		<div class="col-sm-2">
+  			<p>官方微信</p>
+  			<img src="./dist/images/wx.jpg">
+  		</div>
+  	</div>
+  </div>
+  </div>
+    <script src="./lib/jquery/dist/jquery.min.js"></script>
+    <script src="./lib/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="dist/js/core.min.js"></script>
+    <script src="./lib/bootstrapvalidator/dist/js/bootstrapValidator.min.js"></script>
+<link rel="stylesheet" href="./lib/bootstrapvalidator/dist/css/bootstrapValidator.min.css">
+    <script type="text/javascript">
+    	$(function () {
+		  $('.el-tooltip').tooltip()
+		})
+    	
+    	
+    </script>
+</body>
+
+</html>

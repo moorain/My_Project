@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<!-- 定义视口 -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title>账户充值</title>
+		<!-- 引入样式资源文件 -->
+		<link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.min.css">
+		<link rel="stylesheet" href="dist/css/core.min.css">
+			<!--3. 引入jquery-->
+		<script src="lib/jquery/dist/jquery.min.js"></script>
+		<!--引入模版js-->
+		<script src="./js/template.js" type="text/javascript" charset="utf-8"></script>
+		<!--引入mock-->
+        <!-- <script src="http://mockjs.com/dist/mock.js"></script> -->
+        <script src="./dist/js/mock.js"></script>
+		<style type="text/css">
+			.panel-heading{
+				height: 50px;
+				line-height: 34px;
+				font-size: 16px;
+			}
+			/*分页*/
+			.page_div {
+				-ms-user-select: none;
+				-moz-user-select: none;
+				-webkit-user-select: none;
+				margin-top: 20px;
+				margin-bottom: 20px;
+				font-size: 15px;
+				font-family: "microsoft yahei";
+				color: #666666;
+				margin-right: 10px;
+				padding-left: 20px;
+				box-sizing: border-box;
+			}
+			/*
+			 * 页数按钮样式
+			 */
+			
+			.page_div a {
+				text-decoration: none;
+				min-width: 30px;
+				height: 28px;
+				border: 1px solid #dce0e0!important;
+				text-align: center;
+				margin: 0 4px;
+				cursor: pointer;
+				line-height: 28px;
+				color: #666666;
+				font-size: 13px;
+				display: inline-block;
+			}
+			
+			#firstPage,
+			#lastPage {
+				width: 50px;
+				color: #0073A9;
+				border: 1px solid #0073A9!important;
+			}
+			
+			#prePage,
+			#nextPage {
+				width: 70px;
+				color: #0073A9;
+				border: 1px solid #0073A9!important;
+			}
+			
+			.page_div .current {
+				background-color: #0073A9;
+				border-color: #0073A9;
+				color: #FFFFFF;
+			}
+			
+			.totalPages {
+				margin: 0 10px;
+			}
+			
+			.totalPages span,
+			.totalSize span {
+				color: #0073A9;
+				margin: 0 5px;
+			}
+
+		</style>
+	</head>
+
+	<body>
+		<!-- Modal -->
+		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		  <div class="modal-dialog" role="document">
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+		        <h4 class="modal-title" id="myModalLabel">添加</h4>
+		      </div>
+		      <div class="modal-body">
+		       <!-- 动态加载内容-->
+		      </div>
+		      <div class="modal-footer">  
+		      	<button type="button" class="btn btn-primary">保存</button>
+		        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+		      </div>
+		    </div>
+		  </div>
+		</div>
+		<!-- 顶部导航 -->
+		<header class="el-topbar navbar navbar-inverse">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#topMenu" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+					<a class="navbar-brand" href="#">
+						<span class="glyphicon glyphicon-phone-alt"> </span>
+						<i>028-86261949</i>
+					</a>
+				</div>
+				<div class="collapse navbar-collapse" id="topMenu">
+					<ul class="nav navbar-nav navbar-right">
+						<li>
+							<a href="index.html">首页</a>
+						</li>
+						<li>
+							<a href="login.html">登陆</a>
+						</li>
+						<li>
+							<a href="recharge.html">赶快充值</a>
+						</li>
+						<li>
+							<a href="#">注销</a>
+						</li>
+						<li>
+							<a href="#">帮助</a>
+						</li>
+						<li class="visible-lg iconfont">
+							<a href="" id="contact" data-toggle="tooltip" data-placement="bottom" data-html="true" data-original-title="<img src='./dist/images/contract.png'>">
+								<span class="icon-qq"></span>
+								<span>联系客服</span>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</header>
+		<!-- 内容导航 -->
+		<nav class="el-navbar navbar navbar-defalut">
+			<div class="container">
+				<div class="navbar-header">
+					<a class="navbar-brand" href="#">
+						<img src="./dist/images/logo.png" alt=""> </a>
+				</div>
+				<ul class="nav navbar-nav">
+					<li>
+						<a href="./index.html">&emsp;首页&emsp;</a>
+					</li>
+					<li>
+						<a href="./invest.html">我要投资</a>
+					</li>
+					<li>
+						<a href="./borrow.html">我要借款</a>
+					</li>
+					<li>
+						<a href="./personal.html">个人中心</a>
+					</li>
+					<li>
+						<a href="#">新手指引</a>
+					</li>
+					<li>
+						<a href="#">关于我们</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+		<!-- 内容区 -->
+		<div class="el-recharge-main container">
+			<div class="panel panel-default">
+			  <div class="panel-heading">用户管理 
+			  	<button class="btnform btn btn-primary pull-right" data-method="create" data-toggle="modal" data-target="#myModal">添加</button> 
+			  </div>
+			  <div class="panel-body">
+			   	<table class="table">
+			   		<thead>
+				   		<tr>				
+				   			<th>姓名</th><th>性别</th><th>证件类型</th><th>证件号码</th><th>操作</th>
+				   		</tr>
+			   		</thead>
+			   		<tbody>
+				   		
+			   		</tbody>
+			   	</table>
+			   	<div id="page" class="page_div"></div>
+
+			</div>
+		</div>
+
+		<!-- 尾部 -->
+		<footer class="el-footer">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-8">
+						<p>专业Java培训、PHP培训、UI培训、iOS培训、高级Web前端培训机构</p>
+						<p> 版权所有： 2006-2015成都源代码教育咨询有限公司</p>
+						<p> 地  址： 成都市高新区府城大道西段399号天府新谷1号楼620-625</p>
+						<p> 电  话： 028-86261949 / 400-808-6840  邮箱： yuandaima@itsource.cn</p>
+						<p>
+							<a href="###">蜀ICP备14030149号-1</a>&emsp;&emsp;
+							<a href="###">蜀公网安备510114990541</a>
+						</p>
+					</div>
+					<div class="col-md-2">
+						<p>官方微博:</p>
+						<img src="./dist/images/tecent.png" alt="">
+						<img src="./dist/images/sina.png" alt="">
+					</div>
+					<div class="col-md-2">
+						<p>官方微信:</p>
+						<img src="./dist/images/wx.jpg" alt="">
+					</div>
+				</div>
+			</div>
+		</footer>
+	</body>
+	<!--js需要延迟加载-->
+	<!--3. 引入boostrap脚本资源文件-->
+	<script src="lib/bootstrap/dist/js/bootstrap.min.js"></script>
+	<!--引入分页插件-->
+	<script type="text/javascript" src="js/paging.js"></script>
+
+	<!-- 表单验证插件 -->
+	<!--<script src="./lib/bootstrapvalidator/dist/js/bootstrapValidator.min.js"></script>-->
+	<!--<link rel="stylesheet" href="./lib/bootstrapvalidator/dist/css/bootstrapValidator.min.css">-->
+	
+		
+	<!--初始化模版引擎-->
+	<script type="text/html" id="mylist">
+		{{each list as v i}}
+		<tr>
+			<td>{{v.truename}}</td>
+			<td>{{v.gender}}</td>
+			<td>{{v.idType}}</td>
+			<td>{{v.idNumber}}</td>
+			<td>
+   				<span class="btnform btn btn-sm btn-success" data-method="edit" data-toggle="modal" data-target="#myModal">修改</span>
+   				<span class="btn btn-sm btn-danger">删除</span>
+   			</td>
+   		</tr>
+		{{/each}}
+	</script>
+	<!--写数据模板-->
+	<script>	
+			// Mock响应模板
+			Mock.mock('http://test.com', {
+			    "user|100": [{   // 随机生成1到200个
+			        'truename': '@cname',  // 中文名称
+			        "gender|1":['男','女'],//性别
+			        "idType|1":['身份证','军官证','驾驶证'],//证件类型
+			        "idNumber":'@id'//随机生成身份证
+			    }]
+			});
+	</script>
+	<script type="text/javascript">
+			$(function(){
+ 				showdata();
+				//定义数据回显函数
+				function showdata(){
+					//修改模态框标题为”修改“
+					$("#myModalLabel").html("修改")
+					//模态框显示完成
+					$('#myModal').on('shown.bs.modal', function (e) {
+						var btn = e.relatedTarget;
+						var method = $(btn).data("method")			
+						if(method == "create"){
+							$(".modal-body").load("bg-realAuthForm.html #myform");
+							//点击保存按钮发生ajax 提交表单
+						}else{
+							$(".modal-body").load("bg-realAuthForm.html #myform",function(){
+								//回调函数，数据回显
+//								add();
+							});
+						}
+						//模拟数据回显的函数 （不为真实数据库操作，做演示用 可删除） 
+						function add(){
+							//获取该条数据的内容
+							var truename = $(that).parent().parent().find("td:eq(0)").html()
+							var gender = $(that).parent().parent().find("td:eq(1)").html()
+							var idType = $(that).parent().parent().find("td:eq(2)").html()
+							var idNumber = $(that).parent().parent().find("td:eq(3)").html()
+//							console.log(truename,gender,idType,idNumber)
+							$("#truename").val(truename)		
+							$("#idType").val(idType)
+							$("#idNumber").val(idNumber)
+							$("#gender").val(gender)
+							if(gender == "男"){
+								$("#_man").attr("checked","checked");
+							}else{
+								$("#_woman").attr("checked","checked");
+							}
+						}
+					})
+				}		
+				//分页
+				(function(){
+					$.get("http://test.com",function(data){
+						var datas = [];
+						data = JSON.parse(data);
+						datas = data.user;
+						//第一次渲染
+						var firstdata = datas.slice(0,5);
+						var html = template("mylist",{'list':firstdata});
+						$("tbody").html(html)
+						
+						
+						//分页
+						var totalPage = datas.length/5;
+						$("#page").paging({
+							pageNo:1,
+							totalPage: totalPage,
+							totalSize: datas.length,
+							callback: function(num) {
+//								console.log(num)
+								var start = 5*(num-1);
+								var end = 5*num;
+//								console.log(start,end);
+								var pagedata = datas.slice(start,end)
+								var html = template("mylist",{'list':pagedata});
+								$("tbody").html(html)
+							}
+						})
+					})
+				})()
+			})
+		</script>
+</html>

@@ -1,0 +1,296 @@
+@import "personnal";
+@import "accountflow";
+@import "borrow";
+@import "borrow-apply";
+@baseColor:#2e8ece;
+@import "borrow_info";
+/* .el-headernav{
+    border-radius: 0;
+    margin-bottom: 0;
+        a{
+            color: white !important;
+        }
+        .navbar-right{
+            li{
+                
+               a{
+                    &:hover{
+                        color:@baseColor !important;
+
+                    }
+                }
+            }
+        }
+        .tooltip{
+            img{
+                width: 110px;
+                height: 110px;
+            }
+        }
+        
+} */
+// 内容导航
+
+// .el-navcon{
+//     margin-bottom:10px; 
+//    .nav{
+//        li{
+//            min-width: 100px;
+//            text-align: center;
+//            &:hover{
+//                background-color: #ccc;
+//                a{
+//                    color:@baseColor;
+//                }
+//            }
+//            a{
+//                line-height: 42px;
+//            }
+//        }
+//    }
+// }
+// 主体内容
+// 理财产品
+.el-licai{
+      margin-top:20px;
+       dl{
+           padding-left: 80px !important;
+           height: 70px;
+           dt{
+            font-size: 20px;
+            font-weight: bold;
+           }
+           dd{
+               color: #737373;
+           }
+       }
+       .img-left{
+           background-image: url("../images/feature01.png");
+           background-position: 0px 0;
+           background-repeat:no-repeat;
+       }
+       .img-middle{
+            background-image: url("../images/feature02.png");
+           background-position: 0px 0;
+           background-repeat:no-repeat;
+       }
+       .img-right{
+           background-image: url("../images/feature03.png");
+           background-position: 0px 0;
+           background-repeat:no-repeat;
+       }
+}
+.el-content{
+    border:0;
+    .panel-body{
+        padding: 0;
+        .pull-left{
+            font-size: 24px;
+            color: @baseColor;
+            font-weight: bold;
+            border-bottom: 4px solid @baseColor;
+        }
+        .pull-right{
+             color: @baseColor;
+        }
+    }
+}
+//理财产品
+.el-table{
+   thead{
+       color: #737373;
+   }
+   tr{
+        td:last-child{
+       text-align:right;
+   }
+   th:last-child{
+        text-align:right;
+   }
+   th{
+       padding-top: 30px !important;
+   }
+   }
+  
+   .el-color{
+       color: @baseColor;
+   }
+}
+//活动部分
+.el-sinaris{
+    .panel-body{
+        margin-top: 10px;
+    }
+    table{
+       tr{
+           td{
+               line-height: 30px;
+               cursor: pointer;
+           }
+           &:hover{
+                td{
+               color:@baseColor;
+           }
+           }
+       }
+    }
+}
+//页脚
+.el-footer{
+    background-color: #F8F8F8;
+    padding-top: 30px;
+    margin-top: 30px;
+    img{
+        width: 100%;
+    }
+    .el-last{
+        color: @baseColor;
+    }
+   
+}
+
+// 个人中心
+@import "personal";
+// 我要投资
+@import "invest";
+// 个人资料
+@import "userInfo";
+// 注册
+@import "register";
+// 充值明细
+@import "recharge_list";
+// 账户充值
+@import "recharge";
+// 实名认证
+@import "realAuth";
+// 账户提现
+@import "moneyWithdraw_apply";
+// 登陆
+@import "login";
+
+@baseColor:#337ab7;
+/* 顶部导航 */
+.el-topbar{
+    border-radius: 0;
+    margin-bottom: 0;
+    .navbar-brand{
+        font-size: 24px;
+        color: #fff;
+        line-height: 10px;
+        span{font-size: 18px;}
+    }
+    .navbar-right{
+        li{
+            a{color: #fff;}
+            &:hover{
+                a{color: @baseColor;}
+            }
+        }
+        div{
+            img{width: 110px;}
+        }
+    }
+}
+/* 内容导航 */
+.el-navbar{
+    margin-bottom: 10px;
+    border-bottom: 1px solid #eee;
+    .navbar-brand{padding-top: 20px;}
+    ul{
+        li{
+            text-align: center;
+            a{
+                height: 80px;
+                line-height: 50px;
+                font-size: 16px;
+                color: #555;
+                &:hover{color: @baseColor;}
+            }
+        }
+    }
+}
+/* 主体内容 */
+.el-main{
+    // 三大特色
+    .feature{
+        margin-top: 20px;
+        .col-md-4{
+            height: 75px;
+            padding-left: 100px;
+            margin-bottom: 5px;
+            dt{
+                font-size: 18px;
+                margin-bottom: 10px;
+            }
+            dd{color: #999;}
+        }
+        .feature-item01{ background: url("../../dist/images/feature01.png") no-repeat 20px;}
+        .feature-item02{ background: url("../../dist/images/feature02.png") no-repeat 20px;}
+        .feature-item03{ background: url("../../dist/images/feature03.png") no-repeat 20px;}
+    }
+    // 进行中借款，新闻中心
+    .panel{
+        border: 0;
+        background-color: #fff;
+        -webkit-box-shadow: 0 0px 0px; 
+        box-shadow: 0 0px 0px; 
+        margin-top: 20px;
+        .panel-heading{
+            padding: 0;
+            background-color: #fff;
+            .pull-left{
+                font-size: 24px;
+                color: @baseColor;
+                font-weight: bold;
+                border-bottom: 3px solid @baseColor;
+            }
+            .pull-right{
+                margin: 10px 10px 0 0;
+            }
+        }
+        .panel-body{
+            padding: 0;
+            margin-top: 20px;
+            font-size: 16px;
+            .el-main-newslist{
+                padding: 0;
+                list-style: none;
+                li{
+                    border-bottom: 1px solid #eee;
+                    a{
+                        display: block;
+                        font-size: 14px;
+                        color: #555;
+                        line-height: 38px;
+                        &:hover{
+                            color: @baseColor;
+                        }
+                    }
+                } 
+            }
+            .table{
+                thead{
+                    th{
+                        color: #999999;
+                        font-size: 14px;
+                    }
+                }
+            }
+
+        }
+    }
+}
+/* 页脚 */
+.el-footer{
+    padding: 30px 0 40px 0;
+    margin: 20px 0 0 0;
+    
+    background-color: #f8f8f8;
+    .col-md-8{
+        padding-left: 10px;
+    }
+    .col-md-2{
+        p{padding-left: 10px;}
+        img{width: 100%;}
+    }
+}

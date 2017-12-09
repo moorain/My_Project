@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- 定义视口 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>投资列表</title>
+    <!-- 引入样式资源文件 -->
+    <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="dist/css/core.min.css">
+</head>
+
+<body>
+    <!-- 顶部导航 -->
+    <header class="el-topbar navbar navbar-inverse">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#topMenu" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">
+                    <span class="glyphicon glyphicon-phone-alt"> </span>
+                    <i>028-86261949</i>
+                </a>
+            </div>
+            <div class="collapse navbar-collapse" id="topMenu">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="index.html">首页</a>
+                    </li>
+                    <li>
+                        <a href="login.html">登陆</a>
+                    </li>
+                    <li>
+                        <a href="recharge.html">赶快充值</a>
+                    </li>
+                    <li>
+                        <a href="#">注销</a>
+                    </li>
+                    <li>
+                        <a href="#">帮助</a>
+                    </li>
+                    <li class="visible-lg iconfont">
+                        <a href="" id="contact" data-toggle="tooltip" data-placement="bottom" data-html="true" data-original-title="<img src='./dist/images/contract.png'>">
+                            <span class="icon-qq"></span>
+                            <span>联系客服</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <!-- 内容导航 -->
+    <nav class="el-navbar navbar navbar-defalut">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">
+                    <img src="./dist/images/logo.png" alt=""> </a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li>
+                    <a href="./index.html">&emsp;首页&emsp;</a>
+                </li>
+                <li>
+                    <a href="./invest.html">我要投资</a>
+                </li>
+                <li>
+                    <a href="./borrow.html">我要借款</a>
+                </li>
+                <li>
+                    <a href="./personal.html">个人中心</a>
+                </li>
+                <li>
+                    <a href="#">新手指引</a>
+                </li>
+                <li>
+                    <a href="#">关于我们</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+
+
+    <!-- 内容区 -->
+
+    <div class="il-main">
+        <div class="container">
+            <section>
+                <p> 投资列表</p>
+                <div class="clearfix">
+                    <span class="pull-left">标的状态</span>
+                    <div class="main-status pull-left">
+                        <div class="btn-group" role="group">
+                            <button type="button" class="btn btn-default active">全部</button>
+                            <button type="button" class="btn btn-default">招标中</button>
+                            <button type="button" class="btn btn-default">还款中</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- 表格内容 -->
+            <section class="il-main-contant">
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th>借款人</th>
+                            <th>借款标题</th>
+                            <th>年利率</th>
+                            <th>金额</th>
+                            <th>还款方式</th>
+                            <th>进度</th>
+                            <th width="80px">操作</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>张三</td>
+                            <td>给我2000度过难关</td>
+                            <td class="text-info"> 10.00%
+                            </td>
+                            <td class="text-info">2,000.00</td>
+                            <td>
+                                按月分期还款
+                            </td>
+                            <td>
+                                <div class="">
+                                    78.00%
+                                </div>
+                            </td>
+                            <td>
+                                <a class="btn btn-danger btn-sm" href="">查看</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>王五</td>
+                            <td>江湖救急，借100吃饭</td>
+                            <td class="text-info"> 12.00%
+                            </td>
+                            <td class="text-info">100.00</td>
+                            <td>
+                                按月到期还款
+                            </td>
+                            <td>
+                                <div class="">
+                                    100.00%
+                                </div>
+                            </td>
+                            <td>
+                                <a class="btn btn-danger btn-sm" href="">查看</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </div>
+    </div>
+
+    <!-- 尾部 -->
+    <footer class="el-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    <p>专业Java培训、PHP培训、UI培训、iOS培训、高级Web前端培训机构</p>
+                    <p> 版权所有： 2006-2015成都源代码教育咨询有限公司</p>
+                    <p> 地  址： 成都市高新区府城大道西段399号天府新谷1号楼620-625</p>
+                    <p> 电  话： 028-86261949 / 400-808-6840  邮箱： yuandaima@itsource.cn</p>
+                    <p>
+                        <a href="###">蜀ICP备14030149号-1</a>&emsp;&emsp;
+                        <a href="###">蜀公网安备510114990541</a>
+                    </p>
+                </div>
+                <div class="col-md-2">
+                    <p>官方微博:</p>
+                    <img src="./dist/images/tecent.png" alt="">
+                    <img src="./dist/images/sina.png" alt="">
+                </div>
+                <div class="col-md-2">
+                    <p>官方微信:</p>
+                    <img src="./dist/images/wx.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+<!--js需要延迟加载-->
+<!--3. 引入jquery-->
+<script src="lib/jquery/dist/jquery.min.js"></script>
+
+<!--3. 引入boostrap脚本资源文件-->
+<script src="lib/bootstrap/dist/js/bootstrap.min.js"></script>
+
+</html>
